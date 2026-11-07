@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "futuretek:block/edge_anchor_top",
+    "side": "futuretek:block/edge_anchor_side",
+    "bottom": "futuretek:block/edge_anchor_side"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "futuretek:block/shadow_planks",
+    "top": "futuretek:block/shadow_planks",
+    "side": "futuretek:block/shadow_planks"
+  }
+}

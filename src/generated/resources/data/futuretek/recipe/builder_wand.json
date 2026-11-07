@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "futuretek:nocturnite"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "  N",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:builder_wand"
+  }
+}

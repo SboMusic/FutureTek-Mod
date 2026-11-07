@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "futuretek:advanced_battery_cell"
+    },
+    "N": {
+      "item": "futuretek:soul_core"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "XNX",
+    "NSN",
+    "XNX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:infinite_core"
+  }
+}

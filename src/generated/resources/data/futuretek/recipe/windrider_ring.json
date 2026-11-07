@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "minecraft:feather"
+    },
+    "S": {
+      "item": "futuretek:nocturnite"
+    },
+    "B": {
+      "item": "futuretek:essence_band"
+    }
+  },
+  "pattern": [
+    "XSX",
+    "SBS",
+    "XSX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:windrider_ring"
+  }
+}

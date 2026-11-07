@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:ingots/silver",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:silver_dust",
+    "count": 1
+  },
+  "time": 150
+}

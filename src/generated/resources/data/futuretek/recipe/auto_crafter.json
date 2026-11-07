@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "T": {
+      "item": "minecraft:crafting_table"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "W": {
+      "item": "futuretek:item_conduit"
+    }
+  },
+  "pattern": [
+    "PTP",
+    "CMC",
+    "PWP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:auto_crafter"
+  }
+}

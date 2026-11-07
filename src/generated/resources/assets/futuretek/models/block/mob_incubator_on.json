@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/mob_incubator_front_on",
+    "side": "futuretek:block/mob_incubator_side",
+    "top": "futuretek:block/mob_incubator_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

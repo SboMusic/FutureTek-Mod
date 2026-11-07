@@ -1,0 +1,18 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:ores/uranium",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:uranium_dust",
+    "count": 2
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:uranium_dust",
+      "count": 1
+    },
+    "chance": 0.1
+  }
+}

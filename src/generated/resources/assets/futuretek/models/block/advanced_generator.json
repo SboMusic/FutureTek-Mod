@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/advanced_generator_front",
+    "side": "futuretek:block/advanced_generator_side",
+    "top": "futuretek:block/machine_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

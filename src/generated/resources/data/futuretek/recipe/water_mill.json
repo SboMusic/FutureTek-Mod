@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "W": {
+      "tag": "c:rods/wooden"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "PWP",
+    "WMW",
+    "PWP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:water_mill"
+  }
+}

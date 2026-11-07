@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "futuretek:block/area_marker"
+  },
+  "render_type": "minecraft:cutout"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "futuretek:slate_bricks"
+  },
+  "result": {
+    "id": "futuretek:cracked_slate_bricks"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "futuretek:essence_crystal_2"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CNC",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:essence_crystal_3"
+  }
+}

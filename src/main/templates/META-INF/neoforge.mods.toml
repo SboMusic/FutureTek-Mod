@@ -1,0 +1,31 @@
+# Scheda d'identita' della mod: NeoForge la legge per sapere chi siamo.
+# I valori tra graffe col dollaro vengono presi da gradle.properties durante la compilazione.
+# ATTENZIONE: non scrivere mai il simbolo dollaro nei commenti di questo file.
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="futuretek_logo.png"
+authors="SboMusic"
+credits="Ispirata alle meccaniche dei modpack tecnologici classici. Contenuti, nomi e codice originali."
+description='''
+Tecnologia, energia, trasmutazione, logistica, agricoltura ed esplorazione: dalla prima officina fino alle stelle.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "futuretek:block/honey_planks",
+    "top": "futuretek:block/honey_planks",
+    "side": "futuretek:block/honey_planks"
+  }
+}

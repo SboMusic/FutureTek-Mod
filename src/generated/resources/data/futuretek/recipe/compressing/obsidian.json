@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:compressing",
+  "ingredient": {
+    "item": "futuretek:obsidian_dust",
+    "count": 4
+  },
+  "result": {
+    "id": "minecraft:obsidian",
+    "count": 1
+  }
+}

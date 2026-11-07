@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "B": {
+      "item": "futuretek:battery_box"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    }
+  },
+  "pattern": [
+    "SCS",
+    "SBS",
+    "R R"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:jetpack"
+  }
+}

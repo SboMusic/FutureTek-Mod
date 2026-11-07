@@ -1,0 +1,18 @@
+{
+  "type": "futuretek:centrifuging",
+  "ingredient": {
+    "item": "futuretek:purified_crushed_iron",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:iron_dust",
+    "count": 1
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:tin_dust",
+      "count": 1
+    },
+    "chance": 0.05
+  }
+}

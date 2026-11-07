@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "H": {
+      "item": "minecraft:honeycomb"
+    },
+    "C": {
+      "tag": "c:chests/wooden"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "HCH",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:apiary"
+  }
+}

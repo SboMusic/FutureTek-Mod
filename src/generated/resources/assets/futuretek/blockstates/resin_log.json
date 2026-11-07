@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=y,resin=false": {
+      "model": "futuretek:block/resin_log"
+    },
+    "axis=z,resin=false": {
+      "model": "futuretek:block/resin_log_horizontal",
+      "x": 90
+    },
+    "axis=x,resin=false": {
+      "model": "futuretek:block/resin_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,resin=true": {
+      "model": "futuretek:block/resin_log_resin"
+    },
+    "axis=z,resin=true": {
+      "model": "futuretek:block/resin_log_resin_horizontal",
+      "x": 90
+    },
+    "axis=x,resin=true": {
+      "model": "futuretek:block/resin_log_resin_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

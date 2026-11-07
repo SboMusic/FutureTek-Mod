@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:robot_chassis"
+    },
+    {
+      "item": "futuretek:advanced_battery_cell"
+    },
+    {
+      "item": "futuretek:advanced_circuit"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:robot"
+  }
+}

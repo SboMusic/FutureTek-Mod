@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "futuretek:block/cobbled_volcanic_rock"
+  }
+}

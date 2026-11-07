@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:nuggets/gold"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    },
+    "P": {
+      "item": "minecraft:glass_pane"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "C": {
+      "item": "futuretek:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "GRG",
+    "PBP",
+    "GCG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:enchant_archive"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:storage_blocks/raw_tin",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:tin_dust",
+    "count": 18
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "futuretek:volcanic_rock_bricks"
+  },
+  "result": {
+    "id": "futuretek:cracked_volcanic_rock_bricks"
+  }
+}

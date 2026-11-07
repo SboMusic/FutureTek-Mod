@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:exo_boots"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "futuretek:advanced_circuit"
+    },
+    {
+      "item": "futuretek:advanced_circuit"
+    },
+    {
+      "item": "futuretek:advanced_battery_cell"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:exo_mk3_boots"
+  }
+}

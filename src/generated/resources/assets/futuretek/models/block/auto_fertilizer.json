@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/auto_fertilizer_front",
+    "side": "futuretek:block/auto_fertilizer_side",
+    "top": "futuretek:block/auto_fertilizer_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

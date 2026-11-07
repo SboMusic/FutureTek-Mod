@@ -1,0 +1,8 @@
+# Gestione dei "fine riga" tra Windows e altri sistemi
+* text=auto
+*.bat text eol=crlf
+gradlew text eol=lf
+*.png binary
+*.jar binary
+src/generated/**/.cache/* text eol=lf
+src/generated/**/*.json text eol=lf

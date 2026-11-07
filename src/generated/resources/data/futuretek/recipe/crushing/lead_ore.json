@@ -1,0 +1,18 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:ores/lead",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:lead_dust",
+    "count": 2
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:lead_dust",
+      "count": 1
+    },
+    "chance": 0.1
+  }
+}

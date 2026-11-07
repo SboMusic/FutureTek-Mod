@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "W": {
+      "item": "futuretek:item_conduit"
+    }
+  },
+  "pattern": [
+    "PEP",
+    "CMC",
+    "PWP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:logistics_core"
+  }
+}

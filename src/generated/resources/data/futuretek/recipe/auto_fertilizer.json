@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "D": {
+      "item": "minecraft:dispenser"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "BDB",
+    "CMC",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:auto_fertilizer"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "minecraft:tnt"
+    },
+    "S": {
+      "item": "futuretek:stellar_ember"
+    },
+    "N": {
+      "item": "futuretek:nocturnite"
+    }
+  },
+  "pattern": [
+    "TST",
+    "SNS",
+    "TST"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:void_catalyst"
+  }
+}

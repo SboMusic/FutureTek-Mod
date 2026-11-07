@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "item": "minecraft:coal",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:coal_dust",
+    "count": 1
+  }
+}

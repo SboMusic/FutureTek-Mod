@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "futuretek:block/charcoal_kiln"
+    },
+    "lit=true": {
+      "model": "futuretek:block/charcoal_kiln_on"
+    }
+  }
+}

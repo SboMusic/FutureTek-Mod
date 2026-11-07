@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "futuretek:block/white_marble_bricks",
+    "top": "futuretek:block/white_marble_bricks",
+    "side": "futuretek:block/white_marble_bricks"
+  }
+}

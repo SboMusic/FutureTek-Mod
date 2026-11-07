@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:storage_blocks/raw_lead",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:lead_dust",
+    "count": 18
+  }
+}

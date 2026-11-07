@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "minecraft:redstone_torch"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    },
+    "T": {
+      "item": "minecraft:redstone_torch"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    " X ",
+    "RTR",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:not_gate"
+  }
+}

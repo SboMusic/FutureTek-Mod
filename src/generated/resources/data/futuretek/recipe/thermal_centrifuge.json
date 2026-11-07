@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "B": {
+      "item": "minecraft:blast_furnace"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "SBS",
+    "CMC",
+    "SBS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:thermal_centrifuge"
+  }
+}

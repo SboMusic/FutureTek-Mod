@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "tag": "c:plates/tin"
+    },
+    "G": {
+      "tag": "c:glass_panes"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "W": {
+      "item": "futuretek:tin_cable"
+    }
+  },
+  "pattern": [
+    "TGT",
+    "TCT",
+    "W W"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:multimeter"
+  }
+}

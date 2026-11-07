@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "CMC",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:crusher"
+  }
+}

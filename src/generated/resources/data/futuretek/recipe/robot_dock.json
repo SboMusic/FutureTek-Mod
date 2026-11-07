@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "W": {
+      "item": "futuretek:tin_cable"
+    },
+    "B": {
+      "item": "futuretek:battery_box"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "PWP",
+    "BMB",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:robot_dock"
+  }
+}

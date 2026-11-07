@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "futuretek:insulated_copper_cable"
+    },
+    "P": {
+      "tag": "c:plates/tin"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:overclock_upgrade"
+  }
+}

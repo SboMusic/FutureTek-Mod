@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "futuretek:block/apiary_front",
+    "south": "futuretek:block/apiary_side",
+    "east": "futuretek:block/apiary_side",
+    "west": "futuretek:block/apiary_side",
+    "up": "futuretek:block/apiary_top",
+    "down": "futuretek:block/apiary_top",
+    "particle": "futuretek:block/apiary_side"
+  }
+}

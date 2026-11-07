@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "futuretek:block/volcanic_rock_bricks_slab"
+    },
+    "type=top": {
+      "model": "futuretek:block/volcanic_rock_bricks_slab_top"
+    },
+    "type=double": {
+      "model": "futuretek:block/volcanic_rock_bricks"
+    }
+  }
+}

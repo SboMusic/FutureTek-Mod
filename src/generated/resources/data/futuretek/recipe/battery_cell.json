@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "futuretek:tin_cable"
+    },
+    "T": {
+      "tag": "c:plates/tin"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    }
+  },
+  "pattern": [
+    " C ",
+    "TRT",
+    "TRT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:battery_cell"
+  }
+}

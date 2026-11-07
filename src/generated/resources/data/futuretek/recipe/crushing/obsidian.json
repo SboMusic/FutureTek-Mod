@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:obsidians",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:obsidian_dust",
+    "count": 2
+  }
+}

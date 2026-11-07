@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "minecraft:blaze_rod"
+    },
+    "S": {
+      "item": "futuretek:stellar_ember"
+    },
+    "B": {
+      "item": "futuretek:essence_band"
+    }
+  },
+  "pattern": [
+    "XSX",
+    "SBS",
+    "XSX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:ember_ring"
+  }
+}

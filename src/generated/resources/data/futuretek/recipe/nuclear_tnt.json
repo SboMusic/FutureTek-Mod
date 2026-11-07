@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "U": {
+      "tag": "c:ingots/uranium"
+    },
+    "T": {
+      "item": "minecraft:tnt"
+    },
+    "C": {
+      "item": "futuretek:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "UTU",
+    "TCT",
+    "UTU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:nuclear_tnt"
+  }
+}

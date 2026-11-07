@@ -1,0 +1,18 @@
+{
+  "type": "futuretek:washing",
+  "ingredient": {
+    "tag": "c:raw_materials/lead",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:purified_crushed_lead",
+    "count": 3
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:silver_dust",
+      "count": 1
+    },
+    "chance": 0.1
+  }
+}

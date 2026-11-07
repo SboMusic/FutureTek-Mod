@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bookshelf"
+    },
+    "C": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "L": {
+      "tag": "c:storage_blocks/lapis"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "BCB",
+    "LML",
+    "BCB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:enchant_researcher"
+  }
+}

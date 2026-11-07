@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "B": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "pattern": [
+    "PBP",
+    "B B",
+    "PBP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:heat_vent"
+  }
+}

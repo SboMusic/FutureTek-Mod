@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:cobbled_volcanic_rock"
+  },
+  "result": {
+    "count": 1,
+    "id": "futuretek:cobbled_volcanic_rock_stairs"
+  }
+}

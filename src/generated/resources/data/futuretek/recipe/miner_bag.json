@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "C": {
+      "tag": "c:chests/wooden"
+    },
+    "1": {
+      "item": "futuretek:scanning_dust_1"
+    },
+    "2": {
+      "item": "futuretek:scanning_dust_2"
+    },
+    "3": {
+      "item": "futuretek:scanning_dust_3"
+    }
+  },
+  "pattern": [
+    "W1W",
+    "2C3",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:miner_bag"
+  }
+}

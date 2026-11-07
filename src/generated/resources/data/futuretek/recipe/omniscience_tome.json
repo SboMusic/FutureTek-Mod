@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "A": {
+      "item": "futuretek:ardorite"
+    },
+    "B": {
+      "item": "minecraft:book"
+    }
+  },
+  "pattern": [
+    "NAN",
+    "ABA",
+    "NAN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:omniscience_tome"
+  }
+}

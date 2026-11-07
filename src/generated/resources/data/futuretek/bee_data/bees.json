@@ -1,0 +1,131 @@
+{
+  "_info": "Prodotti (probabilita' per ciclo) e incroci delle api di FutureTek",
+  "products": {
+    "common": [
+      {
+        "item": "minecraft:honeycomb",
+        "chance": 0.4
+      }
+    ],
+    "forest": [
+      {
+        "item": "minecraft:honeycomb",
+        "chance": 0.3
+      },
+      {
+        "item": "futuretek:sticky_resin",
+        "chance": 0.3
+      }
+    ],
+    "meadow": [
+      {
+        "item": "minecraft:honeycomb",
+        "chance": 0.4
+      },
+      {
+        "item": "minecraft:bone_meal",
+        "chance": 0.2
+      }
+    ],
+    "mineral": [
+      {
+        "item": "futuretek:mineral_comb",
+        "chance": 0.35
+      }
+    ],
+    "metallic": [
+      {
+        "item": "futuretek:metallic_comb",
+        "chance": 0.3
+      }
+    ],
+    "glacial": [
+      {
+        "item": "futuretek:frozen_comb",
+        "chance": 0.35
+      }
+    ],
+    "ember": [
+      {
+        "item": "futuretek:ember_comb",
+        "chance": 0.3
+      }
+    ],
+    "abyssal": [
+      {
+        "item": "futuretek:abyssal_comb",
+        "chance": 0.2
+      }
+    ],
+    "voltaic": [
+      {
+        "item": "futuretek:voltaic_comb",
+        "chance": 0.25
+      }
+    ],
+    "stellar": [
+      {
+        "item": "futuretek:stellar_comb",
+        "chance": 0.15
+      }
+    ]
+  },
+  "mutations": [
+    {
+      "parents": [
+        "common",
+        "forest"
+      ],
+      "result": "mineral",
+      "chance": 0.15
+    },
+    {
+      "parents": [
+        "common",
+        "meadow"
+      ],
+      "result": "glacial",
+      "chance": 0.12
+    },
+    {
+      "parents": [
+        "mineral",
+        "meadow"
+      ],
+      "result": "metallic",
+      "chance": 0.1
+    },
+    {
+      "parents": [
+        "mineral",
+        "forest"
+      ],
+      "result": "ember",
+      "chance": 0.1
+    },
+    {
+      "parents": [
+        "metallic",
+        "ember"
+      ],
+      "result": "voltaic",
+      "chance": 0.08
+    },
+    {
+      "parents": [
+        "glacial",
+        "ember"
+      ],
+      "result": "abyssal",
+      "chance": 0.08
+    },
+    {
+      "parents": [
+        "voltaic",
+        "abyssal"
+      ],
+      "result": "stellar",
+      "chance": 0.05
+    }
+  ]
+}

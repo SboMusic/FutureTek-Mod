@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "futuretek:diamond_chest"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "futuretek:blocks/diamond_chest"
+}

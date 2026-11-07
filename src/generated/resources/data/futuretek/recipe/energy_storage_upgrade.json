@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/tin"
+    },
+    "W": {
+      "item": "futuretek:tin_cable"
+    },
+    "B": {
+      "item": "futuretek:battery_cell"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "WBW",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:energy_storage_upgrade"
+  }
+}

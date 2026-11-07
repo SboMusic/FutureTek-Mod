@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/steel"
+    },
+    "A": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "G": {
+      "tag": "c:ingots/gold"
+    },
+    "X": {
+      "item": "futuretek:combustion_generator"
+    }
+  },
+  "pattern": [
+    "PAP",
+    "GXG",
+    "PAP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:advanced_generator"
+  }
+}

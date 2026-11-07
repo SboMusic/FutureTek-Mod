@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "futuretek:reinforced_rail"
+    },
+    "P": {
+      "item": "minecraft:stone_pressure_plate"
+    }
+  },
+  "pattern": [
+    "R R",
+    "RPR",
+    "R R"
+  ],
+  "result": {
+    "count": 4,
+    "id": "futuretek:holding_rail"
+  }
+}

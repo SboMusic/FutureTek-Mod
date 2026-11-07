@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "futuretek:insulated_copper_cable"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "futuretek:blocks/insulated_copper_cable"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "minecraft:saplings"
+    },
+    "A": {
+      "item": "minecraft:iron_axe"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "CMC",
+    "SHS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:tree_farm"
+  }
+}

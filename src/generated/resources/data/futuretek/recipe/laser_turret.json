@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "V": {
+      "item": "futuretek:voltite_shard"
+    },
+    "A": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "B": {
+      "item": "futuretek:advanced_battery_cell"
+    }
+  },
+  "pattern": [
+    "DVD",
+    "AMA",
+    "SBS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:laser_turret"
+  }
+}

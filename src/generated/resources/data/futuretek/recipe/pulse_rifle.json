@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "V": {
+      "item": "futuretek:voltite_shard"
+    },
+    "B": {
+      "item": "futuretek:advanced_battery_cell"
+    },
+    "C": {
+      "item": "futuretek:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "VBC",
+    "  S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:pulse_rifle"
+  }
+}

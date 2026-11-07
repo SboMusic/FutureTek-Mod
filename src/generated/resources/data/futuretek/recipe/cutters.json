@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "P P",
+    " P ",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:cutters"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/reactor_core_front_on",
+    "side": "futuretek:block/reactor_side",
+    "top": "futuretek:block/reactor_side",
+    "bottom": "futuretek:block/reactor_side"
+  }
+}

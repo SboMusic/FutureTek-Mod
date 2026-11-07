@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "D": {
+      "tag": "c:dusts/coal"
+    },
+    "V": {
+      "tag": "c:gems/voltite"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "DVD",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:solar_panel"
+  }
+}

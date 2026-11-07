@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "futuretek:block/obsidian_chest_front",
+    "side": "futuretek:block/obsidian_chest_side",
+    "top": "futuretek:block/obsidian_chest_top"
+  }
+}

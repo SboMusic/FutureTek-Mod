@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "futuretek:nocturnite"
+    },
+    "S": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    "M",
+    "M",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:nocturnite_sword"
+  }
+}

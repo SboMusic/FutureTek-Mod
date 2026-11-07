@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "tag": "c:dusts/redstone"
+    },
+    "G": {
+      "tag": "c:dusts/glowstone"
+    },
+    "V": {
+      "tag": "c:gems/voltite"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    "RGR",
+    "VDV",
+    "RGR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:shifting_stone"
+  }
+}

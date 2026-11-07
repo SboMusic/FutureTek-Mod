@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "minecraft:wool"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "LSL",
+    "SMS",
+    "LSL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:wind_mill"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:slate"
+  },
+  "result": {
+    "count": 1,
+    "id": "futuretek:slate_wall"
+  }
+}

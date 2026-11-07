@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "C": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "T": {
+      "item": "minecraft:crafting_table"
+    },
+    "B": {
+      "item": "futuretek:battery_cell"
+    }
+  },
+  "pattern": [
+    "PWP",
+    "FCT",
+    "PBP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:shelter_core"
+  }
+}

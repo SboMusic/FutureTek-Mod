@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "futuretek:block/honey_slab"
+    },
+    "type=top": {
+      "model": "futuretek:block/honey_slab_top"
+    },
+    "type=double": {
+      "model": "futuretek:block/honey_planks"
+    }
+  }
+}

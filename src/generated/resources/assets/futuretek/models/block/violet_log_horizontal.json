@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "futuretek:block/violet_log_top",
+    "side": "futuretek:block/violet_log"
+  }
+}

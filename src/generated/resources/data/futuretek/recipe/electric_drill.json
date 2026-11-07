@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "B": {
+      "item": "futuretek:battery_cell"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PCP",
+    "PBP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:electric_drill"
+  }
+}

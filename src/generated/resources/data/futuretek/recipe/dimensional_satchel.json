@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "X": {
+      "item": "futuretek:essence_crystal"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "E": {
+      "item": "minecraft:ender_chest"
+    }
+  },
+  "pattern": [
+    "LXL",
+    "WEW",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:dimensional_satchel"
+  }
+}

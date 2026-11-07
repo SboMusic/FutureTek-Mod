@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:extracting",
+  "ingredient": {
+    "item": "minecraft:tnt",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:gunpowder",
+    "count": 5
+  }
+}

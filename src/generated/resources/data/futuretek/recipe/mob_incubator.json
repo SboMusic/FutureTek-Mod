@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "N": {
+      "item": "futuretek:soul_core"
+    },
+    "A": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "AMA",
+    "SNS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:mob_incubator"
+  }
+}

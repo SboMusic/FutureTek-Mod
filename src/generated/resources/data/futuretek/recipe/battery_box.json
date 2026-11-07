@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "futuretek:tin_cable"
+    },
+    "B": {
+      "item": "futuretek:battery_cell"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "BBB",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:battery_box"
+  }
+}

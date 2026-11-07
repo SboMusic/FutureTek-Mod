@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/steel"
+    },
+    "A": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "X": {
+      "item": "futuretek:crusher"
+    }
+  },
+  "pattern": [
+    "PAP",
+    "AXA",
+    "PAP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:advanced_crusher"
+  }
+}

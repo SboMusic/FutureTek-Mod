@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "futuretek:block/amber_slab"
+    },
+    "type=top": {
+      "model": "futuretek:block/amber_slab_top"
+    },
+    "type=double": {
+      "model": "futuretek:block/amber_planks"
+    }
+  }
+}

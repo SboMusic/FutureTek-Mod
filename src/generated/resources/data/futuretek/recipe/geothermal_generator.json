@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "F": {
+      "item": "futuretek:combustion_generator"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "GBG",
+    "GFG",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:geothermal_generator"
+  }
+}

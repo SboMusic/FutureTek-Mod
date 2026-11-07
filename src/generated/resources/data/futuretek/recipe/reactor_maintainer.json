@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/lead"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "C": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "R": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    "PHP",
+    "CMC",
+    "PRP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:reactor_maintainer"
+  }
+}

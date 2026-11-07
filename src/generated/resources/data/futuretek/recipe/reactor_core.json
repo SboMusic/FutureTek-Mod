@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "futuretek:reactor_chamber"
+    },
+    "X": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:battery_box_2"
+    }
+  },
+  "pattern": [
+    "CXC",
+    "XMX",
+    "CXC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:reactor_core"
+  }
+}

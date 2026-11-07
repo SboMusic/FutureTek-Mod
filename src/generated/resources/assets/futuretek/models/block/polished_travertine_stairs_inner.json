@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "futuretek:block/polished_travertine",
+    "top": "futuretek:block/polished_travertine",
+    "side": "futuretek:block/polished_travertine"
+  }
+}

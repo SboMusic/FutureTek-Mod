@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/enchant_researcher_front_on",
+    "side": "futuretek:block/enchant_researcher_side",
+    "top": "futuretek:block/enchant_researcher_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

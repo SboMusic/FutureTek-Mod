@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "futuretek:scanning_dust_1"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " DD",
+    " SD",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:ore_scanner_1"
+  }
+}

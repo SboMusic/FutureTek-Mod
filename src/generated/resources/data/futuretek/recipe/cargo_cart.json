@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:chest_minecart"
+    },
+    {
+      "tag": "c:chests/wooden"
+    },
+    {
+      "tag": "c:plates/steel"
+    },
+    {
+      "tag": "c:plates/steel"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:cargo_cart"
+  }
+}

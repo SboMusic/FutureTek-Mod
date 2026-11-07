@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "V": {
+      "tag": "c:gems/voltite"
+    }
+  },
+  "pattern": [
+    "III",
+    "IVI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:essence_band"
+  }
+}

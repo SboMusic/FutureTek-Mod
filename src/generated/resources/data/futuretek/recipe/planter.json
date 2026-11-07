@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "H": {
+      "item": "minecraft:iron_hoe"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "P": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "pattern": [
+    "WHW",
+    "CMC",
+    "WPW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:planter"
+  }
+}

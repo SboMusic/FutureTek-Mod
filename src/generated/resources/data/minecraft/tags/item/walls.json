@@ -1,0 +1,24 @@
+{
+  "values": [
+    "futuretek:volcanic_rock_wall",
+    "futuretek:cobbled_volcanic_rock_wall",
+    "futuretek:polished_volcanic_rock_wall",
+    "futuretek:volcanic_rock_bricks_wall",
+    "futuretek:volcanic_rock_tiles_wall",
+    "futuretek:white_marble_wall",
+    "futuretek:cobbled_white_marble_wall",
+    "futuretek:polished_white_marble_wall",
+    "futuretek:white_marble_bricks_wall",
+    "futuretek:white_marble_tiles_wall",
+    "futuretek:travertine_wall",
+    "futuretek:cobbled_travertine_wall",
+    "futuretek:polished_travertine_wall",
+    "futuretek:travertine_bricks_wall",
+    "futuretek:travertine_tiles_wall",
+    "futuretek:slate_wall",
+    "futuretek:cobbled_slate_wall",
+    "futuretek:polished_slate_wall",
+    "futuretek:slate_bricks_wall",
+    "futuretek:slate_tiles_wall"
+  ]
+}

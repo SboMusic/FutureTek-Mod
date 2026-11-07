@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "tag": "c:plates/iron"
+    },
+    "C": {
+      "item": "futuretek:battery_cell"
+    }
+  },
+  "pattern": [
+    "M M",
+    "MCM",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:exo_mk1_chestplate"
+  }
+}

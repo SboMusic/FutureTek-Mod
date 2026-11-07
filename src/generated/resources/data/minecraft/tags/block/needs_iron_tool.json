@@ -1,0 +1,18 @@
+{
+  "values": [
+    "futuretek:silver_block",
+    "futuretek:raw_silver_block",
+    "futuretek:uranium_block",
+    "futuretek:raw_uranium_block",
+    "futuretek:steel_block",
+    "futuretek:silver_ore",
+    "futuretek:deepslate_silver_ore",
+    "futuretek:uranium_ore",
+    "futuretek:deepslate_uranium_ore",
+    "futuretek:voltite_ore",
+    "futuretek:deepslate_voltite_ore",
+    "futuretek:reactor_core",
+    "futuretek:reactor_chamber",
+    "futuretek:quarry"
+  ]
+}

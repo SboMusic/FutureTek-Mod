@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "item": "futuretek:voltite_block"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "O": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "pattern": [
+    "VEV",
+    "EOE",
+    "VEV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:edge_anchor"
+  }
+}

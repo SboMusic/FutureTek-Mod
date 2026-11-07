@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:shifting_stone"
+    },
+    {
+      "item": "futuretek:arcane_ember"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:coal"
+  }
+}

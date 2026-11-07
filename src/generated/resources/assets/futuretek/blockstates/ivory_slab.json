@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "futuretek:block/ivory_slab"
+    },
+    "type=top": {
+      "model": "futuretek:block/ivory_slab_top"
+    },
+    "type=double": {
+      "model": "futuretek:block/ivory_planks"
+    }
+  }
+}

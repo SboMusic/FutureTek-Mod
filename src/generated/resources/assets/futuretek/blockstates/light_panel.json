@@ -1,0 +1,56 @@
+{
+  "variants": {
+    "facing=up,lit=false": {
+      "model": "futuretek:block/light_panel"
+    },
+    "facing=up,lit=true": {
+      "model": "futuretek:block/light_panel_on"
+    },
+    "facing=down,lit=false": {
+      "model": "futuretek:block/light_panel",
+      "x": 180
+    },
+    "facing=down,lit=true": {
+      "model": "futuretek:block/light_panel_on",
+      "x": 180
+    },
+    "facing=north,lit=false": {
+      "model": "futuretek:block/light_panel",
+      "x": 90
+    },
+    "facing=north,lit=true": {
+      "model": "futuretek:block/light_panel_on",
+      "x": 90
+    },
+    "facing=south,lit=false": {
+      "model": "futuretek:block/light_panel",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,lit=true": {
+      "model": "futuretek:block/light_panel_on",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "futuretek:block/light_panel",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "futuretek:block/light_panel_on",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east,lit=false": {
+      "model": "futuretek:block/light_panel",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "futuretek:block/light_panel_on",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

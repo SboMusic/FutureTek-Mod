@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "futuretek:advanced_circuit"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "E": {
+      "item": "minecraft:enchanting_table"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "DED",
+    "OMO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:electric_enchanter"
+  }
+}

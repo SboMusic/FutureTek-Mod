@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:ingots/uranium",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:uranium_dust",
+    "count": 1
+  },
+  "time": 150
+}

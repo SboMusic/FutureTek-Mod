@@ -1,0 +1,226 @@
+<title>FutureTek Ricettario</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: banco da officina — testata fissa con ricerca, schede per sezione, ogni ricetta disegnata come una griglia d'inventario */
+:root {
+  --bg: #e6e9ec;
+  --panel: #f7f8f9;
+  --ink: #1b212b;
+  --muted: #5b6573;
+  --line: #c9cfd6;
+  --accent: #b5582a;      /* rame */
+  --accent-ink: #ffffff;
+  --slot: #8d939b;
+  --slot-hi: #c3c8ce;
+  --slot-lo: #50555c;
+  --slot-in: #a3a9b0;
+  --flash: #f4c26a;
+  --display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171c; --panel: #1d2128; --ink: #e5e8ec; --muted: #9aa3ae; --line: #2f353e;
+    --accent: #e0864c; --accent-ink: #1a1208; --slot: #3a4048; --slot-hi: #555c66; --slot-lo: #1a1d22;
+    --slot-in: #2c3138; --flash: #8a6420; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171c; --panel: #1d2128; --ink: #e5e8ec; --muted: #9aa3ae; --line: #2f353e;
+  --accent: #e0864c; --accent-ink: #1a1208; --slot: #3a4048; --slot-hi: #555c66; --slot-lo: #1a1d22;
+  --slot-in: #2c3138; --flash: #8a6420; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding-block: 12px; }
+h1 { font: 700 22px/1.1 var(--display); letter-spacing: .02em; margin: 0; flex: 1 1 auto; }
+h1 small { display: block; font: 500 12px var(--body); color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin-top: 3px; }
+#cerca { flex: 1 1 260px; max-width: 420px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; }
+#cerca:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+nav.chips { display: flex; gap: 6px; overflow-x: auto; padding-block: 0 10px; scrollbar-width: thin; }
+nav.chips a { flex: 0 0 auto; font: 500 13px var(--body); color: var(--ink); text-decoration: none; padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); white-space: nowrap; }
+nav.chips a:hover, nav.chips a:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+nav.chips b { font: 500 11px var(--mono); color: var(--muted); margin-left: 4px; }
+main { padding-block: 18px 60px; }
+.intro { max-width: 70ch; color: var(--muted); margin: 0 0 8px; }
+.legenda { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.legenda span { display: inline-flex; align-items: center; gap: 6px; }
+section { margin-top: 34px; scroll-margin-top: 130px; }
+section > h2 { font: 700 20px/1.2 var(--display); margin: 0; display: flex; align-items: baseline; gap: 10px; text-wrap: balance; }
+section > h2 span { font: 500 12px var(--mono); color: var(--muted); }
+section > p { margin: 4px 0 14px; color: var(--muted); }
+.carte { display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: 12px; }
+.carta { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 10px; min-width: 0; scroll-margin-top: 140px; transition: box-shadow .3s; }
+.carta.lampo { box-shadow: 0 0 0 3px var(--flash); }
+.carta h3 { margin: 0; font: 600 15px/1.3 var(--body); display: flex; gap: 8px; align-items: center; min-width: 0; }
+.carta h3 .tit { overflow-wrap: anywhere; }
+.badge { flex: 0 0 auto; margin-left: auto; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; }
+.badge.ok { color: var(--accent); border-color: var(--accent); }
+.banco { display: flex; align-items: center; gap: 10px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 38px); grid-template-rows: repeat(3, 38px); gap: 2px; padding: 4px; background: var(--slot-in); border-radius: 3px; }
+.slot { width: 38px; height: 38px; background: var(--slot); border-top: 2px solid var(--slot-lo); border-left: 2px solid var(--slot-lo); border-bottom: 2px solid var(--slot-hi); border-right: 2px solid var(--slot-hi); display: grid; place-items: center; position: relative; }
+.slot.grande { width: 52px; height: 52px; }
+.slot img { width: 32px; height: 32px; image-rendering: pixelated; }
+.slot.grande img { width: 40px; height: 40px; }
+.slot .q { position: absolute; right: 2px; bottom: 0; font: 700 13px var(--mono); color: #fff; text-shadow: 1px 1px 0 #222, -1px 0 0 #222; }
+.slot button { all: unset; cursor: pointer; display: grid; place-items: center; width: 100%; height: 100%; }
+.slot button:focus-visible { outline: 2px solid var(--accent); }
+.tessera { width: 30px; height: 30px; border-radius: 3px; display: grid; place-items: center; font: 700 11px var(--mono); color: #111; box-shadow: inset 0 0 0 2px rgba(0,0,0,.25), inset 2px 2px 0 rgba(255,255,255,.35); text-transform: uppercase; }
+.freccia { width: 34px; height: 18px; flex: 0 0 auto; }
+.freccia path { fill: var(--muted); }
+.ingr { font-size: 13px; color: var(--muted); margin: 0; }
+.ingr a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 2px; cursor: pointer; }
+.macchina { margin-top: 18px; }
+.macchina h3 { font: 700 16px var(--display); display: flex; align-items: center; gap: 8px; margin: 0 0 8px; }
+.macchina h3 img { width: 28px; height: 28px; image-rendering: pixelated; }
+.righe { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 8px; }
+.riga { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: flex; align-items: center; gap: 10px; min-width: 0; scroll-margin-top: 140px; }
+.riga.lampo { box-shadow: 0 0 0 3px var(--flash); }
+.riga .testo { font-size: 13px; min-width: 0; overflow-wrap: anywhere; }
+.riga .testo b { font-weight: 600; }
+.riga .extra { color: var(--accent); }
+.vuoto { padding: 30px; text-align: center; color: var(--muted); }
+@media (max-width: 420px) { .righe { grid-template-columns: 1fr; } .carte { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .carta, .riga { transition: none; } html { scroll-behavior: auto; } }
+</style>
+
+<header>
+  <div class="wrap">
+    <h1>FutureTek Ricettario<small>Tutti i craft della mod · Minecraft 1.21.1</small></h1>
+    <input id="cerca" type="search" placeholder="Cerca un oggetto o un ingrediente…" aria-label="Cerca">
+  </div>
+  <div class="wrap"><nav class="chips" id="chips" aria-label="Sezioni"></nav></div>
+</header>
+<main class="wrap">
+  <p class="intro">Ogni scheda mostra la griglia del banco da lavoro come in gioco. Tocca un ingrediente sottolineato per andare alla sua ricetta. Le ricette delle macchine sono raggruppate per macchina.</p>
+  <div class="legenda">
+    <span><span class="badge">3×3</span> forma esatta</span>
+    <span><span class="badge">senza forma</span> posizione libera</span>
+    <span><span class="badge ok">resta</span> l'attrezzo torna indietro (martello, pietra del mutamento…)</span>
+    <span><span class="tessera" style="background:#d8d8d8">LF</span> oggetto di Minecraft</span>
+  </div>
+  <div id="contenuto"></div>
+</main>
+
+<script>
+const DATI = /*__DATI__*/null;
+const ATTREZZI = new Set(["futuretek:forge_hammer", "futuretek:cutters", "futuretek:shifting_stone"]);
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function sigla(nome) {
+  const p = nome.replace(/[()']/g, " ").split(/\s+/).filter(w => w.length > 2 && !["con", "del", "dei", "delle", "qualsiasi"].includes(w.toLowerCase()));
+  return ((p[0] || nome)[0] + (p[1] ? p[1][0] : (p[0] || nome)[1] || "")).toUpperCase();
+}
+function chiaro(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  return ((n >> 16) * 299 + ((n >> 8) & 255) * 587 + (n & 255) * 114) / 1000 > 120;
+}
+function contenutoSlot(it) {
+  if (!it) return "";
+  if (it.i) return `<img src="${it.i}" alt="${esc(it.n)}" title="${esc(it.n)}">`;
+  const c = it.c || "#9a9a9a";
+  return `<span class="tessera" style="background:${c};color:${chiaro(c) ? "#111" : "#f4f4f4"}" title="${esc(it.n)}">${esc(sigla(it.n))}</span>`;
+}
+function slot(it, q, grande) {
+  const dentro = contenutoSlot(it);
+  const quant = q && q > 1 ? `<span class="q">${q}</span>` : "";
+  const corpo = it && it.ft ? `<button type="button" data-vai="${it.ft}" aria-label="Vai a ${esc(it.n)}">${dentro}</button>` : dentro;
+  return `<div class="slot${grande ? " grande" : ""}">${corpo}${quant}</div>`;
+}
+const FRECCIA = `<svg class="freccia" viewBox="0 0 34 18" aria-hidden="true"><path d="M0 6h22V0l12 9-12 9v-6H0z"/></svg>`;
+
+function nomeLink(it) {
+  return it.ft ? `<a data-vai="${it.ft}">${esc(it.n)}</a>` : esc(it.n);
+}
+function elencoIngredienti(griglia) {
+  const conta = new Map();
+  for (const riga of griglia) for (const it of riga) if (it) {
+    const k = it.n; const v = conta.get(k) || { it, n: 0 }; v.n++; conta.set(k, v);
+  }
+  return [...conta.values()].map(v => `${v.n}× ${nomeLink(v.it)}${ATTREZZI.has(v.it.ft) ? " (resta)" : ""}`).join(", ");
+}
+
+function carta(r) {
+  const testoCerca = [r.o.n, ...(r.g ? r.g.flat().filter(Boolean).map(i => i.n) : [r.in.n])].join(" ").toLowerCase();
+  if (r.k === "forno") {
+    return `<article class="carta" data-id="${r.id}" data-cerca="${esc(testoCerca)}">
+      <h3><span class="tit">${esc(r.o.n)}</span><span class="badge">${r.alto ? "fornace · altoforno" : "fornace"}</span></h3>
+      <div class="banco">${slot(r.in)}${FRECCIA}${slot(r.o, r.q, true)}</div>
+      <p class="ingr">Cuoci: ${nomeLink(r.in)}</p></article>`;
+  }
+  const attrezzo = r.g.flat().some(i => i && ATTREZZI.has(i.ft));
+  const badge = r.k === "senza" ? "senza forma" : "3×3";
+  return `<article class="carta" data-id="${r.id}" data-cerca="${esc(testoCerca)}">
+    <h3><span class="tit">${esc(r.o.n)}${r.q > 1 ? ` <span style="color:var(--muted);font-weight:500">×${r.q}</span>` : ""}</span>
+    <span class="badge${attrezzo ? " ok" : ""}">${attrezzo ? "resta" : badge}</span></h3>
+    <div class="banco"><div class="grid3">${r.g.flat().map(i => slot(i)).join("")}</div>${FRECCIA}${slot(r.o, r.q, true)}</div>
+    <p class="ingr">${elencoIngredienti(r.g)}</p></article>`;
+}
+function riga(r) {
+  const extra = r.x ? `<span class="extra"> + ${r.xq > 1 ? r.xq + "× " : ""}${nomeLink(r.x)} (${r.xp}%)</span>` : "";
+  const testoCerca = [r.o.n, r.in.n, r.x ? r.x.n : "", r.mn].join(" ").toLowerCase();
+  return `<div class="riga" data-id="${r.id}" data-cerca="${esc(testoCerca)}">
+    ${slot(r.in, r.qi)}${FRECCIA}${slot(r.o, r.q)}${r.x ? slot(r.x, r.xq) : ""}
+    <div class="testo"><b>${r.qi > 1 ? r.qi + "× " : ""}${nomeLink(r.in)}</b> → ${r.q > 1 ? r.q + "× " : ""}${nomeLink(r.o)}${extra}</div></div>`;
+}
+
+function disegna() {
+  const per = new Map(DATI.categorie.map(c => [c.id, []]));
+  for (const r of DATI.ricette) per.get(r.cat).push(r);
+  let html = "", chips = "";
+  for (const c of DATI.categorie) {
+    const lista = per.get(c.id);
+    if (!lista.length) continue;
+    chips += `<a href="#sez-${c.id}">${esc(c.nome)}<b>${lista.length}</b></a>`;
+    html += `<section id="sez-${c.id}" data-sezione><h2>${esc(c.nome)} <span>${lista.length} ricette</span></h2><p>${esc(c.desc)}</p>`;
+    if (c.id === "lavorazioni") {
+      for (const m of DATI.macchine) {
+        const righe = lista.filter(r => r.m === m.id);
+        if (!righe.length) continue;
+        html += `<div class="macchina" data-sezione-macchina><h3>${m.icona ? `<img src="${m.icona}" alt="">` : ""}${esc(m.nome)}</h3><div class="righe">${righe.map(riga).join("")}</div></div>`;
+      }
+    } else {
+      lista.sort((a, b) => a.o.n.localeCompare(b.o.n, "it"));
+      html += `<div class="carte">${lista.map(carta).join("")}</div>`;
+    }
+    html += `</section>`;
+  }
+  $("#contenuto").innerHTML = html + `<p class="vuoto" id="nessuno" hidden>Nessuna ricetta trovata.</p>`;
+  $("#chips").innerHTML = chips;
+}
+
+function filtra() {
+  const q = $("#cerca").value.trim().toLowerCase();
+  let visibili = 0;
+  document.querySelectorAll("[data-cerca]").forEach(el => {
+    const ok = !q || el.dataset.cerca.includes(q);
+    el.hidden = !ok; if (ok) visibili++;
+  });
+  document.querySelectorAll("[data-sezione-macchina]").forEach(m => { m.hidden = !m.querySelector("[data-cerca]:not([hidden])"); });
+  document.querySelectorAll("[data-sezione]").forEach(s => { s.hidden = !s.querySelector("[data-cerca]:not([hidden])"); });
+  $("#nessuno").hidden = visibili > 0;
+}
+
+function vai(id) {
+  // preferisce la ricetta del banco; se non c'e', una delle macchine
+  let el = document.querySelector(`.carta[data-id="${id}"]`) || document.querySelector(`.riga[data-id="${id}"]`);
+  if (!el) return;
+  if (el.hidden) { $("#cerca").value = ""; filtra(); }
+  el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+  el.classList.add("lampo"); setTimeout(() => el.classList.remove("lampo"), 1400);
+}
+
+disegna();
+$("#cerca").addEventListener("input", filtra);
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-vai]");
+  if (t) { e.preventDefault(); vai(t.dataset.vai); }
+});
+</script>

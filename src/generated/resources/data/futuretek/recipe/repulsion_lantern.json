@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:dusts/glowstone"
+    },
+    "A": {
+      "item": "futuretek:arcane_ember"
+    },
+    "L": {
+      "item": "minecraft:lantern"
+    }
+  },
+  "pattern": [
+    "GAG",
+    "ALA",
+    "GAG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:repulsion_lantern"
+  }
+}

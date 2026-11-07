@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:storage_blocks/raw_copper",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:copper_dust",
+    "count": 18
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/thermal_centrifuge_front",
+    "side": "futuretek:block/thermal_centrifuge_side",
+    "top": "futuretek:block/machine_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

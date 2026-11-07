@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:white_marble_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "futuretek:white_marble_bricks_stairs"
+  }
+}

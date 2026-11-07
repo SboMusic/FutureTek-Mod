@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/reactor_maintainer_front",
+    "side": "futuretek:block/reactor_maintainer_side",
+    "top": "futuretek:block/reactor_maintainer_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

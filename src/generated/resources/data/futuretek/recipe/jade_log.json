@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    },
+    "D": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "LDL",
+    "LLL"
+  ],
+  "result": {
+    "count": 8,
+    "id": "futuretek:jade_log"
+  }
+}

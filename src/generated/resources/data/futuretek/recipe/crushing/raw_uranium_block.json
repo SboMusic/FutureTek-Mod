@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:storage_blocks/raw_uranium",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:uranium_dust",
+    "count": 18
+  }
+}

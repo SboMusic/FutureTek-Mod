@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "futuretek:arcane_ember"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "B": {
+      "item": "futuretek:essence_band"
+    }
+  },
+  "pattern": [
+    "AOA",
+    "OBO",
+    "AOA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:repair_talisman"
+  }
+}

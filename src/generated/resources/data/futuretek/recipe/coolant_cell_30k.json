@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "tag": "c:plates/tin"
+    },
+    "C": {
+      "item": "futuretek:coolant_cell"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "CCC",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:coolant_cell_30k"
+  }
+}

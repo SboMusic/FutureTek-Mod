@@ -1,0 +1,50 @@
+{
+  "has_precipitation": false,
+  "temperature": 0.6,
+  "downfall": 0.0,
+  "effects": {
+    "sky_color": 11563263,
+    "fog_color": 9068744,
+    "water_color": 8941823,
+    "water_fog_color": 4004474,
+    "grass_color": 7391464,
+    "foliage_color": 7391464
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:enderman",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:endermite",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "futuretek:edge_voltite",
+      "futuretek:edge_uranium",
+      "futuretek:edge_silver"
+    ],
+    [],
+    [],
+    [
+      "futuretek:voltite_clusters"
+    ],
+    []
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "futuretek:star_collector"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    "CDC",
+    "CDC",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:star_collector_2"
+  }
+}

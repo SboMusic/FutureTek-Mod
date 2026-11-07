@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "tag": "c:gems/voltite"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    "VVV",
+    "VDV",
+    "VVV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:essence_crystal"
+  }
+}

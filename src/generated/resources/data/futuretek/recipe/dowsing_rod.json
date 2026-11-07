@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "tag": "c:gems/voltite"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "V V",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:dowsing_rod"
+  }
+}

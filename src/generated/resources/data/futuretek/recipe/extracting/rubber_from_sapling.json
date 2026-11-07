@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:extracting",
+  "ingredient": {
+    "item": "futuretek:resin_sapling",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:rubber",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "c:plates/lead"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "LPL",
+    "PMP",
+    "LPL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:reactor_chamber"
+  }
+}

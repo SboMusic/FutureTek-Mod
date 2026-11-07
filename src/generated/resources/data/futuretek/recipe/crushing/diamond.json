@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:gems/diamond",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:diamond_dust",
+    "count": 1
+  }
+}

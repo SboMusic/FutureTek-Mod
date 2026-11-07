@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:shifting_stone"
+    },
+    {
+      "tag": "c:ingots/tin"
+    },
+    {
+      "tag": "c:ingots/tin"
+    },
+    {
+      "tag": "c:ingots/tin"
+    },
+    {
+      "tag": "c:ingots/tin"
+    },
+    {
+      "tag": "c:ingots/tin"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:silver_ingot"
+  }
+}

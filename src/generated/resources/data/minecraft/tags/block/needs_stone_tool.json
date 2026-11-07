@@ -1,0 +1,13 @@
+{
+  "values": [
+    "futuretek:tin_block",
+    "futuretek:raw_tin_block",
+    "futuretek:lead_block",
+    "futuretek:raw_lead_block",
+    "futuretek:bronze_block",
+    "futuretek:tin_ore",
+    "futuretek:deepslate_tin_ore",
+    "futuretek:lead_ore",
+    "futuretek:deepslate_lead_ore"
+  ]
+}

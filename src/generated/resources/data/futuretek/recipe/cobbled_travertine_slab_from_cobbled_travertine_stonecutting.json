@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:cobbled_travertine"
+  },
+  "result": {
+    "count": 2,
+    "id": "futuretek:cobbled_travertine_slab"
+  }
+}

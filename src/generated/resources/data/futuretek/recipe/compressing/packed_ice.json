@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:compressing",
+  "ingredient": {
+    "item": "minecraft:ice",
+    "count": 4
+  },
+  "result": {
+    "id": "minecraft:packed_ice",
+    "count": 1
+  },
+  "time": 200
+}

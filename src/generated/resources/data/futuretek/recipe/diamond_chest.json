@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "X": {
+      "item": "futuretek:gold_chest"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "DXD",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:diamond_chest"
+  }
+}

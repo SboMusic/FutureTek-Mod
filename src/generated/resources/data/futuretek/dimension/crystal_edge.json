@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crystal_edge",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "futuretek:crystal_edge",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "futuretek:crystal_highlands"
+    }
+  }
+}

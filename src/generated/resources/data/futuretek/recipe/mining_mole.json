@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "D": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "pattern": [
+    "PDP",
+    "CMC",
+    "PHP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:mining_mole"
+  }
+}

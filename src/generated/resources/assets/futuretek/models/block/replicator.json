@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "futuretek:block/replicator_top",
+    "side": "futuretek:block/replicator_side",
+    "bottom": "futuretek:block/replicator_side"
+  }
+}

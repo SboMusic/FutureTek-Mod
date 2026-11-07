@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/battery_box_3_front",
+    "side": "futuretek:block/battery_box_3_side",
+    "top": "futuretek:block/battery_box_3_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

@@ -1,0 +1,3295 @@
+{
+ "descrizione": "Blocchi da costruzione FutureTek (Fase 16). Nomi e texture originali; ispirazione: pietre vulcaniche/marmo e legni colorati dei vecchi modpack tecnici.",
+ "fonti_ricerca": [
+  {
+   "titolo": "Blue Power - generazione del vulcano (codice sorgente, cono di basalto con colonna di lava)",
+   "url": "https://github.com/Qmunity/BluePower/blob/master/src/main/java/com/bluepowermod/world/WorldGenVolcano.java"
+  },
+  {
+   "titolo": "Blue Power - registrazione della generazione del mondo",
+   "url": "https://github.com/Qmunity/BluePower/blob/master/src/main/java/com/bluepowermod/world/BPWorldGen.java"
+  },
+  {
+   "titolo": "Blue Power - Official Feed The Beast Wiki (basalto, marmo, mattoni e piastrelle decorativi)",
+   "url": "https://ftb.fandom.com/wiki/Blue_Power"
+  },
+  {
+   "titolo": "Basalt (RedPower 2) - FTB Wiki",
+   "url": "https://ftbwiki.org/Basalt_(RedPower_2)"
+  },
+  {
+   "titolo": "Arboriculture / specie di alberi di Forestry - FTB Wiki",
+   "url": "https://ftbwiki.org/Arboriculture"
+  }
+ ],
+ "note_integrazione": [
+  "cubo: Block con proprieta' copiate da Blocks.STONE (pietra) o Blocks.OAK_PLANKS (legno), durezza/resistenza dal JSON",
+  "tronco: RotatedPillarBlock (texture lato + texture_cima), tag minecraft:logs",
+  "scale: StairBlock(base.defaultBlockState(), props), modello come le scale vanilla con la texture del blocco base",
+  "lastra: SlabBlock, modello bottom/top + doppia = modello del blocco base",
+  "muro: WallBlock (tag minecraft:walls), modelli wall_post/side/side_tall + inventory",
+  "staccionata: FenceBlock (tag wooden_fences), cancello: FenceGateBlock(WoodType.OAK, props)",
+  "pietra base: lascia cadere il pietrisco (drop), si scava col piccone (tag mineable/pickaxe); legno: mineable/axe",
+  "generazione: vene come granito/diorite (configured_feature ore con target stone/deepslate + placed_feature)"
+ ],
+ "blocchi": [
+  {
+   "id": "volcanic_rock",
+   "nome_en": "Volcanic Rock",
+   "nome_it": "Roccia vulcanica",
+   "tipo": "cubo",
+   "texture": "futuretek:block/volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:cobbled_volcanic_rock",
+     "esperienza": 0.1
+    }
+   },
+   "generazione": {
+    "tipo": "vena",
+    "dimensione": 64,
+    "per_chunk": 2,
+    "y_min": -48,
+    "y_max": 24,
+    "nota": "anche vicino ai laghi di lava sotterranei"
+   },
+   "drop": "futuretek:cobbled_volcanic_rock"
+  },
+  {
+   "id": "cobbled_volcanic_rock",
+   "nome_en": "Cobbled Volcanic Rock",
+   "nome_it": "Pietrisco di roccia vulcanica",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cobbled_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {}
+  },
+  {
+   "id": "polished_volcanic_rock",
+   "nome_en": "Polished Volcanic Rock",
+   "nome_it": "Roccia vulcanica levigata",
+   "tipo": "cubo",
+   "texture": "futuretek:block/polished_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:volcanic_rock",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_bricks",
+   "nome_en": "Volcanic Rock Bricks",
+   "nome_it": "Mattoni di roccia vulcanica",
+   "tipo": "cubo",
+   "texture": "futuretek:block/volcanic_rock_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:polished_volcanic_rock",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cracked_volcanic_rock_bricks",
+   "nome_en": "Cracked Volcanic Rock Bricks",
+   "nome_it": "Mattoni di roccia vulcanica crepati",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cracked_volcanic_rock_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:volcanic_rock_bricks",
+     "esperienza": 0.1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_tiles",
+   "nome_en": "Volcanic Rock Tiles",
+   "nome_it": "Piastrelle di roccia vulcanica",
+   "tipo": "cubo",
+   "texture": "futuretek:block/volcanic_rock_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:volcanic_rock_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "chiseled_volcanic_rock",
+   "nome_en": "Chiseled Volcanic Rock",
+   "nome_it": "Roccia vulcanica cesellata",
+   "tipo": "cubo",
+   "texture": "futuretek:block/chiseled_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X",
+      "X"
+     ],
+     "X": "futuretek:volcanic_rock_slab",
+     "quanti": 1
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_stairs",
+   "nome_en": "Volcanic Rock Stairs",
+   "nome_it": "Scale di roccia vulcanica",
+   "tipo": "scale",
+   "base": "volcanic_rock",
+   "texture": "futuretek:block/volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_slab",
+   "nome_en": "Volcanic Rock Slab",
+   "nome_it": "Lastra di roccia vulcanica",
+   "tipo": "lastra",
+   "base": "volcanic_rock",
+   "texture": "futuretek:block/volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_wall",
+   "nome_en": "Volcanic Rock Wall",
+   "nome_it": "Muretto di roccia vulcanica",
+   "tipo": "muro",
+   "base": "volcanic_rock",
+   "texture": "futuretek:block/volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_volcanic_rock_stairs",
+   "nome_en": "Cobbled Volcanic Rock Stairs",
+   "nome_it": "Scale di pietrisco di roccia vulcanica",
+   "tipo": "scale",
+   "base": "cobbled_volcanic_rock",
+   "texture": "futuretek:block/cobbled_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_volcanic_rock",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_volcanic_rock_slab",
+   "nome_en": "Cobbled Volcanic Rock Slab",
+   "nome_it": "Lastra di pietrisco di roccia vulcanica",
+   "tipo": "lastra",
+   "base": "cobbled_volcanic_rock",
+   "texture": "futuretek:block/cobbled_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_volcanic_rock",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_volcanic_rock",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "cobbled_volcanic_rock_wall",
+   "nome_en": "Cobbled Volcanic Rock Wall",
+   "nome_it": "Muretto di pietrisco di roccia vulcanica",
+   "tipo": "muro",
+   "base": "cobbled_volcanic_rock",
+   "texture": "futuretek:block/cobbled_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_volcanic_rock",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_volcanic_rock_stairs",
+   "nome_en": "Polished Volcanic Rock Stairs",
+   "nome_it": "Scale di roccia vulcanica levigata",
+   "tipo": "scale",
+   "base": "polished_volcanic_rock",
+   "texture": "futuretek:block/polished_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:polished_volcanic_rock",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_volcanic_rock_slab",
+   "nome_en": "Polished Volcanic Rock Slab",
+   "nome_it": "Lastra di roccia vulcanica levigata",
+   "tipo": "lastra",
+   "base": "polished_volcanic_rock",
+   "texture": "futuretek:block/polished_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:polished_volcanic_rock",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_volcanic_rock",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "polished_volcanic_rock_wall",
+   "nome_en": "Polished Volcanic Rock Wall",
+   "nome_it": "Muretto di roccia vulcanica levigata",
+   "tipo": "muro",
+   "base": "polished_volcanic_rock",
+   "texture": "futuretek:block/polished_volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:polished_volcanic_rock",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_volcanic_rock",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_bricks_stairs",
+   "nome_en": "Volcanic Rock Brick Stairs",
+   "nome_it": "Scale di mattoni di roccia vulcanica",
+   "tipo": "scale",
+   "base": "volcanic_rock_bricks",
+   "texture": "futuretek:block/volcanic_rock_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_bricks_slab",
+   "nome_en": "Volcanic Rock Brick Slab",
+   "nome_it": "Lastra di mattoni di roccia vulcanica",
+   "tipo": "lastra",
+   "base": "volcanic_rock_bricks",
+   "texture": "futuretek:block/volcanic_rock_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock_bricks",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_bricks_wall",
+   "nome_en": "Volcanic Rock Brick Wall",
+   "nome_it": "Muretto di mattoni di roccia vulcanica",
+   "tipo": "muro",
+   "base": "volcanic_rock_bricks",
+   "texture": "futuretek:block/volcanic_rock_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_tiles_stairs",
+   "nome_en": "Volcanic Rock Tile Stairs",
+   "nome_it": "Scale di piastrelle di roccia vulcanica",
+   "tipo": "scale",
+   "base": "volcanic_rock_tiles",
+   "texture": "futuretek:block/volcanic_rock_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock_tiles",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_tiles_slab",
+   "nome_en": "Volcanic Rock Tile Slab",
+   "nome_it": "Lastra di piastrelle di roccia vulcanica",
+   "tipo": "lastra",
+   "base": "volcanic_rock_tiles",
+   "texture": "futuretek:block/volcanic_rock_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock_tiles",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "volcanic_rock_tiles_wall",
+   "nome_en": "Volcanic Rock Tile Wall",
+   "nome_it": "Muretto di piastrelle di roccia vulcanica",
+   "tipo": "muro",
+   "base": "volcanic_rock_tiles",
+   "texture": "futuretek:block/volcanic_rock_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:volcanic_rock_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:volcanic_rock_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble",
+   "nome_en": "White Marble",
+   "nome_it": "Marmo bianco",
+   "tipo": "cubo",
+   "texture": "futuretek:block/white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:cobbled_white_marble",
+     "esperienza": 0.1
+    }
+   },
+   "generazione": {
+    "tipo": "vena",
+    "dimensione": 64,
+    "per_chunk": 2,
+    "y_min": 0,
+    "y_max": 72
+   },
+   "drop": "futuretek:cobbled_white_marble"
+  },
+  {
+   "id": "cobbled_white_marble",
+   "nome_en": "Cobbled White Marble",
+   "nome_it": "Pietrisco di marmo bianco",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cobbled_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {}
+  },
+  {
+   "id": "polished_white_marble",
+   "nome_en": "Polished White Marble",
+   "nome_it": "Marmo bianco levigato",
+   "tipo": "cubo",
+   "texture": "futuretek:block/polished_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:white_marble",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_bricks",
+   "nome_en": "White Marble Bricks",
+   "nome_it": "Mattoni di marmo bianco",
+   "tipo": "cubo",
+   "texture": "futuretek:block/white_marble_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:polished_white_marble",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cracked_white_marble_bricks",
+   "nome_en": "Cracked White Marble Bricks",
+   "nome_it": "Mattoni di marmo bianco crepati",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cracked_white_marble_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:white_marble_bricks",
+     "esperienza": 0.1
+    }
+   }
+  },
+  {
+   "id": "white_marble_tiles",
+   "nome_en": "White Marble Tiles",
+   "nome_it": "Piastrelle di marmo bianco",
+   "tipo": "cubo",
+   "texture": "futuretek:block/white_marble_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:white_marble_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "chiseled_white_marble",
+   "nome_en": "Chiseled White Marble",
+   "nome_it": "Marmo bianco cesellato",
+   "tipo": "cubo",
+   "texture": "futuretek:block/chiseled_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X",
+      "X"
+     ],
+     "X": "futuretek:white_marble_slab",
+     "quanti": 1
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_stairs",
+   "nome_en": "White Marble Stairs",
+   "nome_it": "Scale di marmo bianco",
+   "tipo": "scale",
+   "base": "white_marble",
+   "texture": "futuretek:block/white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:white_marble",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_slab",
+   "nome_en": "White Marble Slab",
+   "nome_it": "Lastra di marmo bianco",
+   "tipo": "lastra",
+   "base": "white_marble",
+   "texture": "futuretek:block/white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:white_marble",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "white_marble_wall",
+   "nome_en": "White Marble Wall",
+   "nome_it": "Muretto di marmo bianco",
+   "tipo": "muro",
+   "base": "white_marble",
+   "texture": "futuretek:block/white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:white_marble",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_white_marble_stairs",
+   "nome_en": "Cobbled White Marble Stairs",
+   "nome_it": "Scale di pietrisco di marmo bianco",
+   "tipo": "scale",
+   "base": "cobbled_white_marble",
+   "texture": "futuretek:block/cobbled_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_white_marble",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_white_marble_slab",
+   "nome_en": "Cobbled White Marble Slab",
+   "nome_it": "Lastra di pietrisco di marmo bianco",
+   "tipo": "lastra",
+   "base": "cobbled_white_marble",
+   "texture": "futuretek:block/cobbled_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_white_marble",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_white_marble",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "cobbled_white_marble_wall",
+   "nome_en": "Cobbled White Marble Wall",
+   "nome_it": "Muretto di pietrisco di marmo bianco",
+   "tipo": "muro",
+   "base": "cobbled_white_marble",
+   "texture": "futuretek:block/cobbled_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_white_marble",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_white_marble_stairs",
+   "nome_en": "Polished White Marble Stairs",
+   "nome_it": "Scale di marmo bianco levigata",
+   "tipo": "scale",
+   "base": "polished_white_marble",
+   "texture": "futuretek:block/polished_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:polished_white_marble",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_white_marble_slab",
+   "nome_en": "Polished White Marble Slab",
+   "nome_it": "Lastra di marmo bianco levigata",
+   "tipo": "lastra",
+   "base": "polished_white_marble",
+   "texture": "futuretek:block/polished_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:polished_white_marble",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_white_marble",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "polished_white_marble_wall",
+   "nome_en": "Polished White Marble Wall",
+   "nome_it": "Muretto di marmo bianco levigata",
+   "tipo": "muro",
+   "base": "polished_white_marble",
+   "texture": "futuretek:block/polished_white_marble",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:polished_white_marble",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_white_marble",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_bricks_stairs",
+   "nome_en": "White Marble Brick Stairs",
+   "nome_it": "Scale di mattoni di marmo bianco",
+   "tipo": "scale",
+   "base": "white_marble_bricks",
+   "texture": "futuretek:block/white_marble_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:white_marble_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_bricks_slab",
+   "nome_en": "White Marble Brick Slab",
+   "nome_it": "Lastra di mattoni di marmo bianco",
+   "tipo": "lastra",
+   "base": "white_marble_bricks",
+   "texture": "futuretek:block/white_marble_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:white_marble_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble_bricks",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "white_marble_bricks_wall",
+   "nome_en": "White Marble Brick Wall",
+   "nome_it": "Muretto di mattoni di marmo bianco",
+   "tipo": "muro",
+   "base": "white_marble_bricks",
+   "texture": "futuretek:block/white_marble_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:white_marble_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_tiles_stairs",
+   "nome_en": "White Marble Tile Stairs",
+   "nome_it": "Scale di piastrelle di marmo bianco",
+   "tipo": "scale",
+   "base": "white_marble_tiles",
+   "texture": "futuretek:block/white_marble_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:white_marble_tiles",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "white_marble_tiles_slab",
+   "nome_en": "White Marble Tile Slab",
+   "nome_it": "Lastra di piastrelle di marmo bianco",
+   "tipo": "lastra",
+   "base": "white_marble_tiles",
+   "texture": "futuretek:block/white_marble_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:white_marble_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble_tiles",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "white_marble_tiles_wall",
+   "nome_en": "White Marble Tile Wall",
+   "nome_it": "Muretto di piastrelle di marmo bianco",
+   "tipo": "muro",
+   "base": "white_marble_tiles",
+   "texture": "futuretek:block/white_marble_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:white_marble_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:white_marble_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine",
+   "nome_en": "Travertine",
+   "nome_it": "Travertino",
+   "tipo": "cubo",
+   "texture": "futuretek:block/travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:cobbled_travertine",
+     "esperienza": 0.1
+    }
+   },
+   "generazione": {
+    "tipo": "vena",
+    "dimensione": 56,
+    "per_chunk": 1,
+    "y_min": 32,
+    "y_max": 110,
+    "nota": "piu' frequente nei deserti e nelle savane (per_chunk 3)"
+   },
+   "drop": "futuretek:cobbled_travertine"
+  },
+  {
+   "id": "cobbled_travertine",
+   "nome_en": "Cobbled Travertine",
+   "nome_it": "Pietrisco di travertino",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cobbled_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {}
+  },
+  {
+   "id": "polished_travertine",
+   "nome_en": "Polished Travertine",
+   "nome_it": "Travertino levigato",
+   "tipo": "cubo",
+   "texture": "futuretek:block/polished_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:travertine",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_bricks",
+   "nome_en": "Travertine Bricks",
+   "nome_it": "Mattoni di travertino",
+   "tipo": "cubo",
+   "texture": "futuretek:block/travertine_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:polished_travertine",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cracked_travertine_bricks",
+   "nome_en": "Cracked Travertine Bricks",
+   "nome_it": "Mattoni di travertino crepati",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cracked_travertine_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:travertine_bricks",
+     "esperienza": 0.1
+    }
+   }
+  },
+  {
+   "id": "travertine_tiles",
+   "nome_en": "Travertine Tiles",
+   "nome_it": "Piastrelle di travertino",
+   "tipo": "cubo",
+   "texture": "futuretek:block/travertine_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:travertine_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "chiseled_travertine",
+   "nome_en": "Chiseled Travertine",
+   "nome_it": "Travertino cesellato",
+   "tipo": "cubo",
+   "texture": "futuretek:block/chiseled_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X",
+      "X"
+     ],
+     "X": "futuretek:travertine_slab",
+     "quanti": 1
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_stairs",
+   "nome_en": "Travertine Stairs",
+   "nome_it": "Scale di travertino",
+   "tipo": "scale",
+   "base": "travertine",
+   "texture": "futuretek:block/travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:travertine",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_slab",
+   "nome_en": "Travertine Slab",
+   "nome_it": "Lastra di travertino",
+   "tipo": "lastra",
+   "base": "travertine",
+   "texture": "futuretek:block/travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:travertine",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "travertine_wall",
+   "nome_en": "Travertine Wall",
+   "nome_it": "Muretto di travertino",
+   "tipo": "muro",
+   "base": "travertine",
+   "texture": "futuretek:block/travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:travertine",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_travertine_stairs",
+   "nome_en": "Cobbled Travertine Stairs",
+   "nome_it": "Scale di pietrisco di travertino",
+   "tipo": "scale",
+   "base": "cobbled_travertine",
+   "texture": "futuretek:block/cobbled_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_travertine",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_travertine_slab",
+   "nome_en": "Cobbled Travertine Slab",
+   "nome_it": "Lastra di pietrisco di travertino",
+   "tipo": "lastra",
+   "base": "cobbled_travertine",
+   "texture": "futuretek:block/cobbled_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_travertine",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_travertine",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "cobbled_travertine_wall",
+   "nome_en": "Cobbled Travertine Wall",
+   "nome_it": "Muretto di pietrisco di travertino",
+   "tipo": "muro",
+   "base": "cobbled_travertine",
+   "texture": "futuretek:block/cobbled_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_travertine",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_travertine_stairs",
+   "nome_en": "Polished Travertine Stairs",
+   "nome_it": "Scale di travertino levigata",
+   "tipo": "scale",
+   "base": "polished_travertine",
+   "texture": "futuretek:block/polished_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:polished_travertine",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_travertine_slab",
+   "nome_en": "Polished Travertine Slab",
+   "nome_it": "Lastra di travertino levigata",
+   "tipo": "lastra",
+   "base": "polished_travertine",
+   "texture": "futuretek:block/polished_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:polished_travertine",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_travertine",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "polished_travertine_wall",
+   "nome_en": "Polished Travertine Wall",
+   "nome_it": "Muretto di travertino levigata",
+   "tipo": "muro",
+   "base": "polished_travertine",
+   "texture": "futuretek:block/polished_travertine",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:polished_travertine",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_travertine",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_bricks_stairs",
+   "nome_en": "Travertine Brick Stairs",
+   "nome_it": "Scale di mattoni di travertino",
+   "tipo": "scale",
+   "base": "travertine_bricks",
+   "texture": "futuretek:block/travertine_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:travertine_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_bricks_slab",
+   "nome_en": "Travertine Brick Slab",
+   "nome_it": "Lastra di mattoni di travertino",
+   "tipo": "lastra",
+   "base": "travertine_bricks",
+   "texture": "futuretek:block/travertine_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:travertine_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine_bricks",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "travertine_bricks_wall",
+   "nome_en": "Travertine Brick Wall",
+   "nome_it": "Muretto di mattoni di travertino",
+   "tipo": "muro",
+   "base": "travertine_bricks",
+   "texture": "futuretek:block/travertine_bricks",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:travertine_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_tiles_stairs",
+   "nome_en": "Travertine Tile Stairs",
+   "nome_it": "Scale di piastrelle di travertino",
+   "tipo": "scale",
+   "base": "travertine_tiles",
+   "texture": "futuretek:block/travertine_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:travertine_tiles",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "travertine_tiles_slab",
+   "nome_en": "Travertine Tile Slab",
+   "nome_it": "Lastra di piastrelle di travertino",
+   "tipo": "lastra",
+   "base": "travertine_tiles",
+   "texture": "futuretek:block/travertine_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:travertine_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine_tiles",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "travertine_tiles_wall",
+   "nome_en": "Travertine Tile Wall",
+   "nome_it": "Muretto di piastrelle di travertino",
+   "tipo": "muro",
+   "base": "travertine_tiles",
+   "texture": "futuretek:block/travertine_tiles",
+   "materiale": "pietra",
+   "durezza": 1.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:travertine_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:travertine_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate",
+   "nome_en": "Slate",
+   "nome_it": "Ardesia",
+   "tipo": "cubo",
+   "texture": "futuretek:block/slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:cobbled_slate",
+     "esperienza": 0.1
+    }
+   },
+   "generazione": {
+    "tipo": "vena",
+    "dimensione": 64,
+    "per_chunk": 2,
+    "y_min": -64,
+    "y_max": 16
+   },
+   "drop": "futuretek:cobbled_slate"
+  },
+  {
+   "id": "cobbled_slate",
+   "nome_en": "Cobbled Slate",
+   "nome_it": "Pietrisco di ardesia",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cobbled_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {}
+  },
+  {
+   "id": "polished_slate",
+   "nome_en": "Polished Slate",
+   "nome_it": "Ardesia levigata",
+   "tipo": "cubo",
+   "texture": "futuretek:block/polished_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:slate",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_bricks",
+   "nome_en": "Slate Bricks",
+   "nome_it": "Mattoni di ardesia",
+   "tipo": "cubo",
+   "texture": "futuretek:block/slate_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:polished_slate",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cracked_slate_bricks",
+   "nome_en": "Cracked Slate Bricks",
+   "nome_it": "Mattoni di ardesia crepati",
+   "tipo": "cubo",
+   "texture": "futuretek:block/cracked_slate_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "fornace": {
+     "da": "futuretek:slate_bricks",
+     "esperienza": 0.1
+    }
+   }
+  },
+  {
+   "id": "slate_tiles",
+   "nome_en": "Slate Tiles",
+   "nome_it": "Piastrelle di ardesia",
+   "tipo": "cubo",
+   "texture": "futuretek:block/slate_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX",
+      "XX"
+     ],
+     "X": "futuretek:slate_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "chiseled_slate",
+   "nome_en": "Chiseled Slate",
+   "nome_it": "Ardesia cesellata",
+   "tipo": "cubo",
+   "texture": "futuretek:block/chiseled_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "resistenza": 6.0,
+   "attrezzo": "piccone",
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X",
+      "X"
+     ],
+     "X": "futuretek:slate_slab",
+     "quanti": 1
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_stairs",
+   "nome_en": "Slate Stairs",
+   "nome_it": "Scale di ardesia",
+   "tipo": "scale",
+   "base": "slate",
+   "texture": "futuretek:block/slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:slate",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_slab",
+   "nome_en": "Slate Slab",
+   "nome_it": "Lastra di ardesia",
+   "tipo": "lastra",
+   "base": "slate",
+   "texture": "futuretek:block/slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:slate",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "slate_wall",
+   "nome_en": "Slate Wall",
+   "nome_it": "Muretto di ardesia",
+   "tipo": "muro",
+   "base": "slate",
+   "texture": "futuretek:block/slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:slate",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_slate_stairs",
+   "nome_en": "Cobbled Slate Stairs",
+   "nome_it": "Scale di pietrisco di ardesia",
+   "tipo": "scale",
+   "base": "cobbled_slate",
+   "texture": "futuretek:block/cobbled_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_slate",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "cobbled_slate_slab",
+   "nome_en": "Cobbled Slate Slab",
+   "nome_it": "Lastra di pietrisco di ardesia",
+   "tipo": "lastra",
+   "base": "cobbled_slate",
+   "texture": "futuretek:block/cobbled_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_slate",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_slate",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "cobbled_slate_wall",
+   "nome_en": "Cobbled Slate Wall",
+   "nome_it": "Muretto di pietrisco di ardesia",
+   "tipo": "muro",
+   "base": "cobbled_slate",
+   "texture": "futuretek:block/cobbled_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:cobbled_slate",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:cobbled_slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_slate_stairs",
+   "nome_en": "Polished Slate Stairs",
+   "nome_it": "Scale di ardesia levigata",
+   "tipo": "scale",
+   "base": "polished_slate",
+   "texture": "futuretek:block/polished_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:polished_slate",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "polished_slate_slab",
+   "nome_en": "Polished Slate Slab",
+   "nome_it": "Lastra di ardesia levigata",
+   "tipo": "lastra",
+   "base": "polished_slate",
+   "texture": "futuretek:block/polished_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:polished_slate",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_slate",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "polished_slate_wall",
+   "nome_en": "Polished Slate Wall",
+   "nome_it": "Muretto di ardesia levigata",
+   "tipo": "muro",
+   "base": "polished_slate",
+   "texture": "futuretek:block/polished_slate",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:polished_slate",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:polished_slate",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_bricks_stairs",
+   "nome_en": "Slate Brick Stairs",
+   "nome_it": "Scale di mattoni di ardesia",
+   "tipo": "scale",
+   "base": "slate_bricks",
+   "texture": "futuretek:block/slate_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:slate_bricks",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:slate_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_bricks_slab",
+   "nome_en": "Slate Brick Slab",
+   "nome_it": "Lastra di mattoni di ardesia",
+   "tipo": "lastra",
+   "base": "slate_bricks",
+   "texture": "futuretek:block/slate_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:slate_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:slate_bricks",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "slate_bricks_wall",
+   "nome_en": "Slate Brick Wall",
+   "nome_it": "Muretto di mattoni di ardesia",
+   "tipo": "muro",
+   "base": "slate_bricks",
+   "texture": "futuretek:block/slate_bricks",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:slate_bricks",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:slate_bricks",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_tiles_stairs",
+   "nome_en": "Slate Tile Stairs",
+   "nome_it": "Scale di piastrelle di ardesia",
+   "tipo": "scale",
+   "base": "slate_tiles",
+   "texture": "futuretek:block/slate_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:slate_tiles",
+     "quanti": 4
+    },
+    "stonecutter": {
+     "da": "futuretek:slate_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "slate_tiles_slab",
+   "nome_en": "Slate Tile Slab",
+   "nome_it": "Lastra di piastrelle di ardesia",
+   "tipo": "lastra",
+   "base": "slate_tiles",
+   "texture": "futuretek:block/slate_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:slate_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:slate_tiles",
+     "quanti": 2
+    }
+   }
+  },
+  {
+   "id": "slate_tiles_wall",
+   "nome_en": "Slate Tile Wall",
+   "nome_it": "Muretto di piastrelle di ardesia",
+   "tipo": "muro",
+   "base": "slate_tiles",
+   "texture": "futuretek:block/slate_tiles",
+   "materiale": "pietra",
+   "durezza": 1.8,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX",
+      "XXX"
+     ],
+     "X": "futuretek:slate_tiles",
+     "quanti": 6
+    },
+    "stonecutter": {
+     "da": "futuretek:slate_tiles",
+     "quanti": 1
+    }
+   }
+  },
+  {
+   "id": "ruby_planks",
+   "nome_en": "Ruby Planks",
+   "nome_it": "Assi color rubino",
+   "tipo": "cubo",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:red_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:ruby_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "ruby_log",
+   "nome_en": "Ruby Log",
+   "nome_it": "Tronco color rubino",
+   "tipo": "tronco",
+   "texture": "futuretek:block/ruby_log",
+   "texture_cima": "futuretek:block/ruby_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:red_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "ruby_stairs",
+   "nome_en": "Ruby Stairs",
+   "nome_it": "Scale di assi color rubino",
+   "tipo": "scale",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:ruby_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "ruby_slab",
+   "nome_en": "Ruby Slab",
+   "nome_it": "Lastra di assi color rubino",
+   "tipo": "lastra",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:ruby_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "ruby_fence",
+   "nome_en": "Ruby Fence",
+   "nome_it": "Staccionata color rubino",
+   "tipo": "staccionata",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:ruby_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "ruby_fence_gate",
+   "nome_en": "Ruby Fence Gate",
+   "nome_it": "Cancello color rubino",
+   "tipo": "cancello",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:ruby_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "amber_planks",
+   "nome_en": "Amber Planks",
+   "nome_it": "Assi color ambra",
+   "tipo": "cubo",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:orange_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:amber_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "amber_log",
+   "nome_en": "Amber Log",
+   "nome_it": "Tronco color ambra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/amber_log",
+   "texture_cima": "futuretek:block/amber_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:orange_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "amber_stairs",
+   "nome_en": "Amber Stairs",
+   "nome_it": "Scale di assi color ambra",
+   "tipo": "scale",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:amber_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "amber_slab",
+   "nome_en": "Amber Slab",
+   "nome_it": "Lastra di assi color ambra",
+   "tipo": "lastra",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:amber_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "amber_fence",
+   "nome_en": "Amber Fence",
+   "nome_it": "Staccionata color ambra",
+   "tipo": "staccionata",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:amber_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "amber_fence_gate",
+   "nome_en": "Amber Fence Gate",
+   "nome_it": "Cancello color ambra",
+   "tipo": "cancello",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:amber_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "honey_planks",
+   "nome_en": "Honey Planks",
+   "nome_it": "Assi color miele",
+   "tipo": "cubo",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:yellow_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:honey_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "honey_log",
+   "nome_en": "Honey Log",
+   "nome_it": "Tronco color miele",
+   "tipo": "tronco",
+   "texture": "futuretek:block/honey_log",
+   "texture_cima": "futuretek:block/honey_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:yellow_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "honey_stairs",
+   "nome_en": "Honey Stairs",
+   "nome_it": "Scale di assi color miele",
+   "tipo": "scale",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:honey_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "honey_slab",
+   "nome_en": "Honey Slab",
+   "nome_it": "Lastra di assi color miele",
+   "tipo": "lastra",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:honey_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "honey_fence",
+   "nome_en": "Honey Fence",
+   "nome_it": "Staccionata color miele",
+   "tipo": "staccionata",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:honey_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "honey_fence_gate",
+   "nome_en": "Honey Fence Gate",
+   "nome_it": "Cancello color miele",
+   "tipo": "cancello",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:honey_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "jade_planks",
+   "nome_en": "Jade Planks",
+   "nome_it": "Assi color giada",
+   "tipo": "cubo",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:green_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:jade_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "jade_log",
+   "nome_en": "Jade Log",
+   "nome_it": "Tronco color giada",
+   "tipo": "tronco",
+   "texture": "futuretek:block/jade_log",
+   "texture_cima": "futuretek:block/jade_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:green_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "jade_stairs",
+   "nome_en": "Jade Stairs",
+   "nome_it": "Scale di assi color giada",
+   "tipo": "scale",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:jade_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "jade_slab",
+   "nome_en": "Jade Slab",
+   "nome_it": "Lastra di assi color giada",
+   "tipo": "lastra",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:jade_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "jade_fence",
+   "nome_en": "Jade Fence",
+   "nome_it": "Staccionata color giada",
+   "tipo": "staccionata",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:jade_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "jade_fence_gate",
+   "nome_en": "Jade Fence Gate",
+   "nome_it": "Cancello color giada",
+   "tipo": "cancello",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:jade_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "azure_planks",
+   "nome_en": "Azure Planks",
+   "nome_it": "Assi color azzurro",
+   "tipo": "cubo",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:light_blue_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:azure_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "azure_log",
+   "nome_en": "Azure Log",
+   "nome_it": "Tronco color azzurro",
+   "tipo": "tronco",
+   "texture": "futuretek:block/azure_log",
+   "texture_cima": "futuretek:block/azure_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:light_blue_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "azure_stairs",
+   "nome_en": "Azure Stairs",
+   "nome_it": "Scale di assi color azzurro",
+   "tipo": "scale",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:azure_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "azure_slab",
+   "nome_en": "Azure Slab",
+   "nome_it": "Lastra di assi color azzurro",
+   "tipo": "lastra",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:azure_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "azure_fence",
+   "nome_en": "Azure Fence",
+   "nome_it": "Staccionata color azzurro",
+   "tipo": "staccionata",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:azure_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "azure_fence_gate",
+   "nome_en": "Azure Fence Gate",
+   "nome_it": "Cancello color azzurro",
+   "tipo": "cancello",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:azure_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "violet_planks",
+   "nome_en": "Violet Planks",
+   "nome_it": "Assi color violetto",
+   "tipo": "cubo",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:purple_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:violet_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "violet_log",
+   "nome_en": "Violet Log",
+   "nome_it": "Tronco color violetto",
+   "tipo": "tronco",
+   "texture": "futuretek:block/violet_log",
+   "texture_cima": "futuretek:block/violet_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:purple_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "violet_stairs",
+   "nome_en": "Violet Stairs",
+   "nome_it": "Scale di assi color violetto",
+   "tipo": "scale",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:violet_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "violet_slab",
+   "nome_en": "Violet Slab",
+   "nome_it": "Lastra di assi color violetto",
+   "tipo": "lastra",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:violet_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "violet_fence",
+   "nome_en": "Violet Fence",
+   "nome_it": "Staccionata color violetto",
+   "tipo": "staccionata",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:violet_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "violet_fence_gate",
+   "nome_en": "Violet Fence Gate",
+   "nome_it": "Cancello color violetto",
+   "tipo": "cancello",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:violet_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "ivory_planks",
+   "nome_en": "Ivory Planks",
+   "nome_it": "Assi color avorio",
+   "tipo": "cubo",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:white_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:ivory_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "ivory_log",
+   "nome_en": "Ivory Log",
+   "nome_it": "Tronco color avorio",
+   "tipo": "tronco",
+   "texture": "futuretek:block/ivory_log",
+   "texture_cima": "futuretek:block/ivory_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:white_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "ivory_stairs",
+   "nome_en": "Ivory Stairs",
+   "nome_it": "Scale di assi color avorio",
+   "tipo": "scale",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:ivory_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "ivory_slab",
+   "nome_en": "Ivory Slab",
+   "nome_it": "Lastra di assi color avorio",
+   "tipo": "lastra",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:ivory_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "ivory_fence",
+   "nome_en": "Ivory Fence",
+   "nome_it": "Staccionata color avorio",
+   "tipo": "staccionata",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:ivory_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "ivory_fence_gate",
+   "nome_en": "Ivory Fence Gate",
+   "nome_it": "Cancello color avorio",
+   "tipo": "cancello",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:ivory_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  },
+  {
+   "id": "shadow_planks",
+   "nome_en": "Shadow Planks",
+   "nome_it": "Assi color ombra",
+   "tipo": "cubo",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 3.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PDP",
+      "PPP"
+     ],
+     "P": "#minecraft:planks",
+     "D": "minecraft:black_dye",
+     "quanti": 8
+    },
+    "crafting_2": {
+     "senza_forma": [
+      "futuretek:shadow_log"
+     ],
+     "quanti": 4
+    }
+   },
+   "tag": [
+    "minecraft:planks"
+   ]
+  },
+  {
+   "id": "shadow_log",
+   "nome_en": "Shadow Log",
+   "nome_it": "Tronco color ombra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/shadow_log",
+   "texture_cima": "futuretek:block/shadow_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LLL",
+      "LDL",
+      "LLL"
+     ],
+     "L": "#minecraft:logs_that_burn",
+     "D": "minecraft:black_dye",
+     "quanti": 8
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn"
+   ]
+  },
+  {
+   "id": "shadow_stairs",
+   "nome_en": "Shadow Stairs",
+   "nome_it": "Scale di assi color ombra",
+   "tipo": "scale",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "X  ",
+      "XX ",
+      "XXX"
+     ],
+     "X": "futuretek:shadow_planks",
+     "quanti": 4
+    }
+   }
+  },
+  {
+   "id": "shadow_slab",
+   "nome_en": "Shadow Slab",
+   "nome_it": "Lastra di assi color ombra",
+   "tipo": "lastra",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XXX"
+     ],
+     "X": "futuretek:shadow_planks",
+     "quanti": 6
+    }
+   }
+  },
+  {
+   "id": "shadow_fence",
+   "nome_en": "Shadow Fence",
+   "nome_it": "Staccionata color ombra",
+   "tipo": "staccionata",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PSP",
+      "PSP"
+     ],
+     "P": "futuretek:shadow_planks",
+     "S": "minecraft:stick",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_fences"
+   ]
+  },
+  {
+   "id": "shadow_fence_gate",
+   "nome_en": "Shadow Fence Gate",
+   "nome_it": "Cancello color ombra",
+   "tipo": "cancello",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "SPS",
+      "SPS"
+     ],
+     "P": "futuretek:shadow_planks",
+     "S": "minecraft:stick",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:fence_gates"
+   ]
+  }
+ ]
+}

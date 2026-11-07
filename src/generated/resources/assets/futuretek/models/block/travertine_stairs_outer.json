@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "futuretek:block/travertine",
+    "top": "futuretek:block/travertine",
+    "side": "futuretek:block/travertine"
+  }
+}

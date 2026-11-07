@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/energy_switch_front_on",
+    "side": "futuretek:block/energy_switch_side",
+    "top": "futuretek:block/energy_switch_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

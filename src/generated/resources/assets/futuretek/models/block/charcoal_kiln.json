@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "futuretek:block/charcoal_kiln_top",
+    "bottom": "futuretek:block/charcoal_kiln_top",
+    "side": "futuretek:block/charcoal_kiln_side"
+  }
+}

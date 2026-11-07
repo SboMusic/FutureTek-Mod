@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "U": {
+      "tag": "c:ingots/uranium"
+    }
+  },
+  "pattern": [
+    "PUP",
+    "PUP",
+    "PUP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:fuel_rod"
+  }
+}

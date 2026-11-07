@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "futuretek:block/star_charge_top",
+    "side": "futuretek:block/star_charge_side",
+    "bottom": "futuretek:block/star_charge_top"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:cobbled_white_marble"
+  },
+  "result": {
+    "count": 1,
+    "id": "futuretek:cobbled_white_marble_wall"
+  }
+}

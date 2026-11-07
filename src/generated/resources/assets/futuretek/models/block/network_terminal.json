@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "futuretek:block/network_terminal_front",
+    "south": "futuretek:block/network_terminal_front",
+    "east": "futuretek:block/network_terminal_front",
+    "west": "futuretek:block/network_terminal_front",
+    "up": "futuretek:block/logistics_side",
+    "down": "futuretek:block/logistics_side",
+    "particle": "futuretek:block/logistics_side"
+  }
+}

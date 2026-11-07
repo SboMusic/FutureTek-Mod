@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:soul_sand"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "T": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "pattern": [
+    "SQS",
+    "BTB",
+    "SQS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:soul_core"
+  }
+}

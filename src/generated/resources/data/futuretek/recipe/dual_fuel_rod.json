@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "futuretek:fuel_rod"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "RPR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:dual_fuel_rod"
+  }
+}

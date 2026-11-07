@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "tag": "c:plates/tin"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    " T ",
+    "TWT",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:coolant_cell"
+  }
+}

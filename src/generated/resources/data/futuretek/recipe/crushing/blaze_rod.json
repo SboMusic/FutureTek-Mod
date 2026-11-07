@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "item": "minecraft:blaze_rod",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:blaze_powder",
+    "count": 5
+  },
+  "time": 100
+}

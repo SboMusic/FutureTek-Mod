@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:compressing",
+  "ingredient": {
+    "tag": "c:ingots/tin",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:tin_plate",
+    "count": 1
+  }
+}

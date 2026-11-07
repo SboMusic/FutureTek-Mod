@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:ores/voltite",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:voltite_shard",
+    "count": 5
+  }
+}

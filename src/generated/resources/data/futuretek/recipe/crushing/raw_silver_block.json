@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:storage_blocks/raw_silver",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:silver_dust",
+    "count": 18
+  }
+}

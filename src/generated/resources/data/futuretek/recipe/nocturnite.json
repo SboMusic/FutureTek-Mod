@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "futuretek:eternal_ember"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EDE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:nocturnite"
+  }
+}

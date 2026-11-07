@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "futuretek:bee_queen",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "futuretek:bee_species": "meadow"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "futuretek:bee_drone",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "futuretek:bee_species": "meadow"
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 3.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "futuretek:blocks/wild_hive_meadow"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "futuretek:item/advanced_battery_cell"
+  }
+}

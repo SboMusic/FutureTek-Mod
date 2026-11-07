@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "futuretek:block/synthesis_table_top",
+    "side": "futuretek:block/synthesis_table_side",
+    "bottom": "futuretek:block/synthesis_table_side"
+  }
+}

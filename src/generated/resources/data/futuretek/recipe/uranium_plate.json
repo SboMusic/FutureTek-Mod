@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:forge_hammer"
+    },
+    {
+      "tag": "c:ingots/uranium"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:uranium_plate"
+  }
+}

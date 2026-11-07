@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "tag": "c:dusts/redstone"
+    },
+    "G": {
+      "tag": "c:ingots/gold"
+    },
+    "V": {
+      "tag": "c:gems/voltite"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "RGR",
+    "VCV",
+    "RGR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:advanced_circuit"
+  }
+}

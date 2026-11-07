@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "L": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "W": {
+      "item": "futuretek:tin_cable"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GLG",
+    "PWP"
+  ],
+  "result": {
+    "count": 4,
+    "id": "futuretek:electric_lamp"
+  }
+}

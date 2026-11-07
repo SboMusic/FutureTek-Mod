@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "futuretek:block/jade_slab"
+    },
+    "type=top": {
+      "model": "futuretek:block/jade_slab_top"
+    },
+    "type=double": {
+      "model": "futuretek:block/jade_planks"
+    }
+  }
+}

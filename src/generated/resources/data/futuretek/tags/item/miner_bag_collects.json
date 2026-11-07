@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#c:ores",
+    "#c:raw_materials",
+    "#c:gems",
+    "#c:dusts",
+    "#minecraft:coals",
+    "#c:nuggets",
+    "minecraft:flint",
+    "minecraft:clay_ball",
+    "minecraft:amethyst_shard",
+    "minecraft:redstone",
+    "minecraft:lapis_lazuli",
+    "minecraft:quartz",
+    "minecraft:glowstone_dust",
+    "minecraft:ancient_debris",
+    "futuretek:voltite_shard"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "futuretek:block/star_charge"
+    },
+    "lit=true": {
+      "model": "futuretek:block/star_charge"
+    }
+  }
+}

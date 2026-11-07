@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/tree_farm_front",
+    "side": "futuretek:block/tree_farm_side",
+    "top": "futuretek:block/tree_farm_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

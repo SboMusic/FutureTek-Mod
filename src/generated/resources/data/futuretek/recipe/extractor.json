@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "futuretek:tree_tap"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "TMT",
+    "TCT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:extractor"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:extracting",
+  "ingredient": {
+    "item": "minecraft:slime_block",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:slime_ball",
+    "count": 9
+  },
+  "time": 100
+}

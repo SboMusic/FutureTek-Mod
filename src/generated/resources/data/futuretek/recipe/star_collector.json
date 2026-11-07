@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "V": {
+      "item": "futuretek:essence_crystal"
+    },
+    "S": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GVG",
+    "GSG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:star_collector"
+  }
+}

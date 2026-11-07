@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "T": {
+      "item": "futuretek:synthesis_table"
+    }
+  },
+  "pattern": [
+    "ODO",
+    "DTD",
+    "ODO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:replicator"
+  }
+}

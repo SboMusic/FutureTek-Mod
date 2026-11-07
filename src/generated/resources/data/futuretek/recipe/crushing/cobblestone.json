@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:cobblestones",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  },
+  "time": 100
+}

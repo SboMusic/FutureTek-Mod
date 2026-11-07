@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:ingots/steel"
+    },
+    "R": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "S S",
+    "SRS",
+    "S S"
+  ],
+  "result": {
+    "count": 16,
+    "id": "futuretek:reinforced_rail"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:compressing",
+  "ingredient": {
+    "item": "minecraft:snowball",
+    "count": 4
+  },
+  "result": {
+    "id": "minecraft:snow_block",
+    "count": 1
+  },
+  "time": 100
+}

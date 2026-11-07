@@ -1,0 +1,19 @@
+{
+  "type": "futuretek:centrifuging",
+  "ingredient": {
+    "item": "futuretek:stellar_comb",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:glowstone_dust",
+    "count": 4
+  },
+  "secondary": {
+    "item": {
+      "id": "minecraft:nether_star",
+      "count": 1
+    },
+    "chance": 0.01
+  },
+  "time": 400
+}

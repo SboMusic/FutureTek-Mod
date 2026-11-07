@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "c:ingots/steel",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:steel_dust",
+    "count": 1
+  },
+  "time": 150
+}

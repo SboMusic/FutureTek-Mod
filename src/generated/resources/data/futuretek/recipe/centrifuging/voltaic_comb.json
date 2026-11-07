@@ -1,0 +1,19 @@
+{
+  "type": "futuretek:centrifuging",
+  "ingredient": {
+    "item": "futuretek:voltaic_comb",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:voltite_shard",
+    "count": 2
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:voltite_shard",
+      "count": 1
+    },
+    "chance": 0.3
+  },
+  "time": 200
+}

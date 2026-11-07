@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "X": {
+      "item": "futuretek:shifting_stone"
+    }
+  },
+  "pattern": [
+    "OSO",
+    "SXS",
+    "OSO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:synthesis_table"
+  }
+}

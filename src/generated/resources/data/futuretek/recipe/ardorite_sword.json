@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "futuretek:ardorite"
+    },
+    "S": {
+      "item": "futuretek:nocturnite"
+    }
+  },
+  "pattern": [
+    "M",
+    "M",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:ardorite_sword"
+  }
+}

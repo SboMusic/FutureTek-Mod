@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:compressing",
+  "ingredient": {
+    "item": "futuretek:voltite_shard",
+    "count": 9
+  },
+  "result": {
+    "id": "minecraft:amethyst_shard",
+    "count": 1
+  }
+}

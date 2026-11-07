@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "V": {
+      "tag": "c:gems/voltite"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "VVV",
+    "GGG"
+  ],
+  "result": {
+    "count": 4,
+    "id": "futuretek:voltite_fiber"
+  }
+}

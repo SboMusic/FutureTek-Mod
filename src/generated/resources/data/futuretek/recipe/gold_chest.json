@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/gold"
+    },
+    "X": {
+      "item": "futuretek:iron_chest"
+    }
+  },
+  "pattern": [
+    "III",
+    "IXI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:gold_chest"
+  }
+}

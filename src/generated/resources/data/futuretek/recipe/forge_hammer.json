@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " II",
+    " SI",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:forge_hammer"
+  }
+}

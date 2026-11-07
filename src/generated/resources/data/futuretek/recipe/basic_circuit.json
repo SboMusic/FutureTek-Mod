@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "futuretek:insulated_copper_cable"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "RPR",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:basic_circuit"
+  }
+}

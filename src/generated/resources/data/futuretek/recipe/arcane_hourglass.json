@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "N": {
+      "item": "futuretek:nocturnite"
+    },
+    "S": {
+      "item": "futuretek:stellar_ember"
+    },
+    "C": {
+      "item": "minecraft:clock"
+    }
+  },
+  "pattern": [
+    "GNG",
+    "SCS",
+    "GNG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:arcane_hourglass"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "minecraft:iron_hoe"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "X": {
+      "item": "minecraft:shears"
+    }
+  },
+  "pattern": [
+    "HHH",
+    "CMC",
+    "PXP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:harvester"
+  }
+}

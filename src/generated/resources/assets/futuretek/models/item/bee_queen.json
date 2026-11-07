@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "futuretek:item/bee_queen",
+    "layer1": "futuretek:item/bee_queen_body"
+  }
+}

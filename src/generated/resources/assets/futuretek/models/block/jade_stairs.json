@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "futuretek:block/jade_planks",
+    "top": "futuretek:block/jade_planks",
+    "side": "futuretek:block/jade_planks"
+  }
+}

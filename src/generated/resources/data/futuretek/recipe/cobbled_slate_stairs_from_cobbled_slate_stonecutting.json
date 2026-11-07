@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:cobbled_slate"
+  },
+  "result": {
+    "count": 1,
+    "id": "futuretek:cobbled_slate_stairs"
+  }
+}

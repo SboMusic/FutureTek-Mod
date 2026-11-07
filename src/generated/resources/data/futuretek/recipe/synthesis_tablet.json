@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "futuretek:stellar_ember"
+    },
+    "T": {
+      "item": "futuretek:synthesis_table"
+    }
+  },
+  "pattern": [
+    "OSO",
+    "STS",
+    "OSO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:synthesis_tablet"
+  }
+}

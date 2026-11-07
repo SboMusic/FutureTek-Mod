@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "futuretek:nocturnite"
+    },
+    "E": {
+      "item": "futuretek:eternal_ember"
+    }
+  },
+  "pattern": [
+    "NEN",
+    "ENE",
+    "NEN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:ardorite"
+  }
+}

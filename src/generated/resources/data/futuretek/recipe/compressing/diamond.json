@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:compressing",
+  "ingredient": {
+    "item": "futuretek:diamond_dust",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 1
+  }
+}

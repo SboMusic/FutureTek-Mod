@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/copper"
+    },
+    "X": {
+      "tag": "c:chests/wooden"
+    }
+  },
+  "pattern": [
+    "III",
+    "IXI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:copper_chest"
+  }
+}

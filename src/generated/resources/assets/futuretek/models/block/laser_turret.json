@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/laser_turret_front",
+    "side": "futuretek:block/laser_turret_side",
+    "top": "futuretek:block/laser_turret_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

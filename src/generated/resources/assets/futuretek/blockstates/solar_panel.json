@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=north,lit=true": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=east,lit=false": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=east,lit=true": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=south,lit=false": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=south,lit=true": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=west,lit=false": {
+      "model": "futuretek:block/solar_panel"
+    },
+    "facing=west,lit=true": {
+      "model": "futuretek:block/solar_panel"
+    }
+  }
+}

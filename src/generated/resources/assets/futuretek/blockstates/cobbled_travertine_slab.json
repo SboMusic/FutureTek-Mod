@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "futuretek:block/cobbled_travertine_slab"
+    },
+    "type=top": {
+      "model": "futuretek:block/cobbled_travertine_slab_top"
+    },
+    "type=double": {
+      "model": "futuretek:block/cobbled_travertine"
+    }
+  }
+}

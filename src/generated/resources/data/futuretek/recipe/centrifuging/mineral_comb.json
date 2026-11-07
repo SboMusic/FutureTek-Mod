@@ -1,0 +1,19 @@
+{
+  "type": "futuretek:centrifuging",
+  "ingredient": {
+    "item": "futuretek:mineral_comb",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:coal_dust",
+    "count": 1
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:iron_dust",
+      "count": 1
+    },
+    "chance": 0.25
+  },
+  "time": 200
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "D": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "P": {
+      "tag": "c:plates/steel"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    },
+    "X": {
+      "item": "futuretek:ejector_upgrade"
+    }
+  },
+  "pattern": [
+    "CDC",
+    "PMP",
+    "PXP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:quarry"
+  }
+}

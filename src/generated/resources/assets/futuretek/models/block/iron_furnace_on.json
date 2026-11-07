@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/iron_furnace_front_on",
+    "side": "futuretek:block/iron_furnace_side",
+    "top": "futuretek:block/iron_furnace_top",
+    "bottom": "futuretek:block/iron_furnace_side"
+  }
+}

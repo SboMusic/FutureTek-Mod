@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,powered=false,triggered=false": {
+      "model": "futuretek:block/random_gate"
+    },
+    "facing=north,powered=false,triggered=true": {
+      "model": "futuretek:block/random_gate"
+    },
+    "facing=north,powered=true,triggered=false": {
+      "model": "futuretek:block/random_gate_on"
+    },
+    "facing=north,powered=true,triggered=true": {
+      "model": "futuretek:block/random_gate_on"
+    },
+    "facing=east,powered=false,triggered=false": {
+      "model": "futuretek:block/random_gate",
+      "y": 90
+    },
+    "facing=east,powered=false,triggered=true": {
+      "model": "futuretek:block/random_gate",
+      "y": 90
+    },
+    "facing=east,powered=true,triggered=false": {
+      "model": "futuretek:block/random_gate_on",
+      "y": 90
+    },
+    "facing=east,powered=true,triggered=true": {
+      "model": "futuretek:block/random_gate_on",
+      "y": 90
+    },
+    "facing=south,powered=false,triggered=false": {
+      "model": "futuretek:block/random_gate",
+      "y": 180
+    },
+    "facing=south,powered=false,triggered=true": {
+      "model": "futuretek:block/random_gate",
+      "y": 180
+    },
+    "facing=south,powered=true,triggered=false": {
+      "model": "futuretek:block/random_gate_on",
+      "y": 180
+    },
+    "facing=south,powered=true,triggered=true": {
+      "model": "futuretek:block/random_gate_on",
+      "y": 180
+    },
+    "facing=west,powered=false,triggered=false": {
+      "model": "futuretek:block/random_gate",
+      "y": 270
+    },
+    "facing=west,powered=false,triggered=true": {
+      "model": "futuretek:block/random_gate",
+      "y": 270
+    },
+    "facing=west,powered=true,triggered=false": {
+      "model": "futuretek:block/random_gate_on",
+      "y": 270
+    },
+    "facing=west,powered=true,triggered=true": {
+      "model": "futuretek:block/random_gate_on",
+      "y": 270
+    }
+  }
+}

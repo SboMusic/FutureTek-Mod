@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:forge_hammer"
+    },
+    {
+      "tag": "c:ingots/silver"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:silver_plate"
+  }
+}

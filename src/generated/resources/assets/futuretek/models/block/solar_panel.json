@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "futuretek:block/solar_panel_top",
+    "side": "futuretek:block/machine_side",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

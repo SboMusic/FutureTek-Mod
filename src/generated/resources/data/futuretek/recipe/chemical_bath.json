@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/tin"
+    },
+    "K": {
+      "item": "minecraft:cauldron"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "PKP",
+    "CMC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:chemical_bath"
+  }
+}

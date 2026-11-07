@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "B": {
+      "item": "minecraft:bone_block"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    },
+    "M": {
+      "item": "futuretek:machine_frame"
+    }
+  },
+  "pattern": [
+    "GBG",
+    "CMC",
+    "GBG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:growth_accelerator"
+  }
+}

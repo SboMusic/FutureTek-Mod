@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/electric_enchanter_front",
+    "side": "futuretek:block/electric_enchanter_side",
+    "top": "futuretek:block/electric_enchanter_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

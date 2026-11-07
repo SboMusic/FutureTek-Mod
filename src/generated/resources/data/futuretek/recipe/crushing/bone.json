@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "item": "minecraft:bone",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:bone_meal",
+    "count": 5
+  },
+  "time": 100
+}

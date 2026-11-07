@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/chemical_bath_front_on",
+    "side": "futuretek:block/chemical_bath_side",
+    "top": "futuretek:block/machine_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

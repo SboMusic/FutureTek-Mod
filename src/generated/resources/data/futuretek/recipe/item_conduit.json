@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:stones"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    }
+  },
+  "pattern": [
+    "SGS"
+  ],
+  "result": {
+    "count": 8,
+    "id": "futuretek:item_conduit"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "futuretek:polished_travertine"
+  },
+  "result": {
+    "count": 1,
+    "id": "futuretek:polished_travertine_wall"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "futuretek:washing",
+  "ingredient": {
+    "tag": "c:ores/copper",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:purified_crushed_copper",
+    "count": 3
+  },
+  "secondary": {
+    "item": {
+      "id": "futuretek:gold_dust",
+      "count": 1
+    },
+    "chance": 0.1
+  }
+}

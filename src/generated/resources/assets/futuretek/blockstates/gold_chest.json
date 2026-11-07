@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "futuretek:block/gold_chest"
+    },
+    "facing=east": {
+      "model": "futuretek:block/gold_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "futuretek:block/gold_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "futuretek:block/gold_chest",
+      "y": 270
+    }
+  }
+}

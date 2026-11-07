@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "futuretek:block/water_mill_front",
+    "side": "futuretek:block/machine_side",
+    "top": "futuretek:block/machine_top",
+    "bottom": "futuretek:block/machine_bottom"
+  }
+}

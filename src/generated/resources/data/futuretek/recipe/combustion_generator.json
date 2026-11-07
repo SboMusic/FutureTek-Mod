@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "futuretek:battery_cell"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "F": {
+      "item": "futuretek:machine_frame"
+    },
+    "U": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "pattern": [
+    " B ",
+    "PFP",
+    " U "
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:combustion_generator"
+  }
+}

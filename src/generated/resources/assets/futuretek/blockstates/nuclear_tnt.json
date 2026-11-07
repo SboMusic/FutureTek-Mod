@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "unstable=false": {
+      "model": "futuretek:block/nuclear_tnt"
+    },
+    "unstable=true": {
+      "model": "futuretek:block/nuclear_tnt"
+    }
+  }
+}

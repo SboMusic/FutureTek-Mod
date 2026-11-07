@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    },
+    "W": {
+      "item": "futuretek:tin_cable"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "PLP",
+    "WCW",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:energy_switch"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "futuretek:wire_pressing",
+  "ingredient": {
+    "tag": "c:plates/tin",
+    "count": 1
+  },
+  "result": {
+    "id": "futuretek:tin_wire",
+    "count": 3
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "futuretek:stellar_ember"
+    },
+    "P": {
+      "item": "minecraft:magma_cream"
+    },
+    "B": {
+      "item": "futuretek:essence_band"
+    }
+  },
+  "pattern": [
+    "SPS",
+    "PBP",
+    "SPS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:magma_amulet"
+  }
+}

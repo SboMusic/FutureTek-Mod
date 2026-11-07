@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "tag": "c:gems/voltite"
+    },
+    "P": {
+      "tag": "c:plates/tin"
+    },
+    "C": {
+      "item": "futuretek:basic_circuit"
+    }
+  },
+  "pattern": [
+    "VVV",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:efficiency_upgrade"
+  }
+}

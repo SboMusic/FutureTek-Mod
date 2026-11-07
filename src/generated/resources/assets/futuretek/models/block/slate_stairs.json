@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "futuretek:block/slate",
+    "top": "futuretek:block/slate",
+    "side": "futuretek:block/slate"
+  }
+}

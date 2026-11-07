@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "futuretek:rubber"
+    },
+    "W": {
+      "tag": "c:wires/gold"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "WWW",
+    "RRR"
+  ],
+  "result": {
+    "count": 6,
+    "id": "futuretek:insulated_gold_cable"
+  }
+}

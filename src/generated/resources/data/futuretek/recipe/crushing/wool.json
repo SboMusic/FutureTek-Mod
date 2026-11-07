@@ -1,0 +1,12 @@
+{
+  "type": "futuretek:crushing",
+  "ingredient": {
+    "tag": "minecraft:wool",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:string",
+    "count": 4
+  },
+  "time": 100
+}
