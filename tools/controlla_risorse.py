@@ -2,6 +2,7 @@
 Controlla che ogni blocco/oggetto registrato abbia modello, texture e traduzioni.
 Uso: python tools/controlla_risorse.py   (dopo genera_risorse.py)
 """
+SENZA_OGGETTO = {"shelter_wall", "shelter_roof", "shelter_window"}  # blocchi che esistono solo nel mondo
 import json
 import sys
 from pathlib import Path
@@ -62,7 +63,9 @@ for riga in (ROOT / "tools/elenco_registro.txt").read_text().split("\n"):
         for v in varianti:
             for vv in (v if isinstance(v, list) else [v]):
                 controlla_modello(vv["model"], visti)
-    if trova(f"models/item/{id_}.json") is None:
+    if id_ in SENZA_OGGETTO:
+        pass
+    elif trova(f"models/item/{id_}.json") is None:
         errori.append(f"modello oggetto mancante: {id_}")
     else:
         controlla_modello(f"{MODID}:item/{id_}", visti)

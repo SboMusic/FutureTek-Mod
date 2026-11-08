@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:volcanic_rock"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:volcanic_rock_button"
+  }
+}

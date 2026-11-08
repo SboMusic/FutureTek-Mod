@@ -16,6 +16,10 @@ def campo(id_):
 
 
 righe = []
+strip = []
+for b in SPEC:
+    if b.get("scortecciato"):
+        strip.append(f"        STRIP.put({campo(b['id'])}.get(), {campo(b['scortecciato'])}.get());")
 for b in SPEC:
     id_, tipo = b["id"], b["tipo"]
     legno = b["materiale"] == "legno"
@@ -37,17 +41,39 @@ for b in SPEC:
         ctor = f"FenceBlock::new, {p}.forceSolidOn()"
     elif tipo == "cancello":
         ctor = f"p -> new FenceGateBlock(WoodType.OAK, p), {p}.forceSolidOn()"
+    elif tipo == "porta":
+        ctor = f"p -> new DoorBlock(BlockSetType.OAK, p), {p}.noOcclusion().pushReaction(PushReaction.DESTROY)"
+    elif tipo == "botola":
+        ctor = f"p -> new TrapDoorBlock(BlockSetType.OAK, p), {p}.noOcclusion().isValidSpawn((s, g, q, t) -> false)"
+    elif tipo == "bottone":
+        set_ = "OAK" if legno else "STONE"
+        ticks = 30 if legno else 20
+        base = "button()" if not legno else "wood()"
+        ctor = (f"p -> new ButtonBlock(BlockSetType.{set_}, {ticks}, p), "
+                f"{base}.strength({dur}F).noCollission().pushReaction(PushReaction.DESTROY)")
+    elif tipo == "pedana":
+        set_ = "OAK" if legno else "STONE"
+        ctor = (f"p -> new PressurePlateBlock(BlockSetType.{set_}, p), "
+                f"{p}.noCollission().forceSolidOn().pushReaction(PushReaction.DESTROY)")
     else:
         raise SystemExit("tipo sconosciuto " + tipo)
     righe.append(f'    public static final DeferredBlock<Block> {campo(id_)} = reg("{id_}", {ctor});')
 
 java = f'''package com.futuretek.registry;
 
+import java.util.IdentityHashMap;
+import java.util.Map;
 import java.util.function.Function;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -64,7 +90,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 /**
  * Blocchi da costruzione (ispirati ai blocchi decorativi di Tekkit Legends, con nomi e grafica nostri):
  * roccia vulcanica, marmo bianco, travertino, ardesia (con levigati, mattoni, piastrelle, cesellati,
- * scale, lastre e muretti) e 8 legni colorati (assi, tronchi, scale, lastre, staccionate, cancelli).
+ * scale, lastre, muretti, pulsanti, pedane) e 8 legni colorati (assi, tronchi, legno, scortecciati, scale, lastre,
+ * staccionate, cancelli, porte, botole, pulsanti, pedane).
  * FILE GENERATO da tools/genera_java_costruzione.py partendo da tools/blocchi_costruzione.json: non modificarlo a mano.
  */
 public final class ModBuildingBlocks {{
@@ -73,6 +100,27 @@ public final class ModBuildingBlocks {{
 
     /** Basta chiamarlo una volta (dal costruttore della mod) per registrare tutto */
     public static void init() {{
+    }}
+
+    private static final Map<Block, Block> STRIP = new IdentityHashMap<>();
+
+    /** L'ascia toglie la corteccia ai nostri tronchi (come con quelli di Minecraft) */
+    public static void onToolUse(net.neoforged.neoforge.event.level.BlockEvent.BlockToolModificationEvent event) {{
+        if (event.getItemAbility() != net.neoforged.neoforge.common.ItemAbilities.AXE_STRIP) {{
+            return;
+        }}
+        if (STRIP.isEmpty()) {{
+{chr(10).join(strip)}
+        }}
+        Block stripped = STRIP.get(event.getState().getBlock());
+        if (stripped != null) {{
+            event.setFinalState(stripped.defaultBlockState().setValue(RotatedPillarBlock.AXIS,
+                    event.getState().getValue(RotatedPillarBlock.AXIS)));
+        }}
+    }}
+
+    private static BlockBehaviour.Properties button() {{
+        return BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE);
     }}
 
     private static BlockBehaviour.Properties stone() {{

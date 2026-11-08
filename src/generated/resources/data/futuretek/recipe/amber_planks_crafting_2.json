@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "futuretek:amber_log"
+      "tag": "futuretek:amber_logs"
     }
   ],
   "result": {

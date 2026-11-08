@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "futuretek:block/volcanic_rock"
+  }
+}

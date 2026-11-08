@@ -15,6 +15,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.gametest.GameTestHolder;
@@ -144,58 +145,108 @@ public class Phase15GameTests {
         helper.succeed();
     }
 
+    /** Il vulcano: cono di roccia vulcanica, magma alla bocca e lava nel cratere */
+    @GameTest(template = EMPTY, timeoutTicks = 100, batch = "vulcano")
+    public static void volcanoGenerates(GameTestHelper helper) {
+        var level = helper.getLevel();
+        BlockPos at = helper.absolutePos(new BlockPos(0, 1, 0)).offset(600, 0, -600);
+        var key = net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.CONFIGURED_FEATURE,
+                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("futuretek", "volcano"));
+        var feature = level.registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.CONFIGURED_FEATURE)
+                .getHolderOrThrow(key).value();
+        for (int dx = -1; dx <= 1; dx++) {     // nella generazione vera i chunk vicini ci sono gia'
+            for (int dz = -1; dz <= 1; dz++) {
+                level.getChunk((at.getX() >> 4) + dx, (at.getZ() >> 4) + dz);
+            }
+        }
+        boolean ok = feature.place(level, level.getChunkSource().getGenerator(), level.getRandom(), at);
+        helper.assertTrue(ok, "Il vulcano non e' stato costruito: floorWG=" + level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.OCEAN_FLOOR_WG, at.getX(), at.getZ())
+                + " floor=" + level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.OCEAN_FLOOR, at.getX(), at.getZ())
+                + " surfWG=" + level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE_WG, at.getX(), at.getZ())
+                + " surf=" + level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE, at.getX(), at.getZ()));
+        int cx = (at.getX() & ~15) + 8, cz = (at.getZ() & ~15) + 8;
+        int rock = 0, lava = 0, magma = 0;
+        for (BlockPos p : BlockPos.betweenClosed(cx - 15, at.getY() - 8, cz - 15, cx + 15, at.getY() + 26, cz + 15)) {
+            var st = level.getBlockState(p);
+            if (st.is(com.futuretek.registry.ModBuildingBlocks.VOLCANIC_ROCK.get())) rock++;
+            if (st.is(Blocks.LAVA)) lava++;
+            if (st.is(Blocks.MAGMA_BLOCK)) magma++;
+        }
+        helper.assertTrue(rock > 500 && lava > 10 && magma > 3, "Vulcano strano: roccia " + rock + " lava " + lava + " magma " + magma);
+        helper.succeed();
+    }
+
+    /** L'ascia toglie la corteccia ai tronchi colorati; porta e botola si piazzano */
+    @GameTest(template = EMPTY, timeoutTicks = 40)
+    public static void colouredWoodStripsAndDoors(GameTestHelper helper) {
+        BlockPos log = new BlockPos(2, 2, 2);
+        helper.setBlock(log, com.futuretek.registry.ModBuildingBlocks.JADE_LOG.get());
+        var player = helper.makeMockPlayer(net.minecraft.world.level.GameType.SURVIVAL);
+        player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, new ItemStack(Items.IRON_AXE));
+        helper.useBlock(log, player);
+        helper.assertBlockPresent(com.futuretek.registry.ModBuildingBlocks.STRIPPED_JADE_LOG.get(), log);
+        helper.setBlock(new BlockPos(4, 2, 2), com.futuretek.registry.ModBuildingBlocks.JADE_TRAPDOOR.get());
+        helper.setBlock(new BlockPos(5, 2, 2), com.futuretek.registry.ModBuildingBlocks.SLATE_BUTTON.get());
+        helper.setBlock(new BlockPos(6, 2, 2), com.futuretek.registry.ModBuildingBlocks.JADE_PRESSURE_PLATE.get());
+        helper.succeed();
+    }
+
     /** Rifugio portatile: costruisce la casa, consuma 1 uso, rotto il nucleo la casa sparisce e torna l'oggetto carico */
     @GameTest(template = EMPTY, timeoutTicks = 100, batch = "rifugio")
     public static void shelterBuildsAndDisappears(GameTestHelper helper) {
         var level = helper.getLevel();
-        BlockPos ground = helper.absolutePos(new BlockPos(0, 1, 0)).offset(-300, 0, 300);
-        for (BlockPos p : BlockPos.betweenClosed(ground.offset(-5, 0, -5), ground.offset(5, 0, 5))) {
-            level.setBlockAndUpdate(p, Blocks.STONE.defaultBlockState());
-            for (int y = 1; y <= 6; y++) level.setBlockAndUpdate(p.above(y), Blocks.AIR.defaultBlockState());
-        }
-        level.setBlockAndUpdate(ground.above().east(), Blocks.SHORT_GRASS.defaultBlockState()); // l'erba sparisce
-        var player = helper.makeMockPlayer(net.minecraft.world.level.GameType.SURVIVAL);
-        ItemStack empty = new ItemStack(ModBlocks.SHELTER_CORE.get());
-        player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, empty);
-        var hit = new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.atCenterOf(ground),
-                net.minecraft.core.Direction.UP, ground, false);
-        // scarico: non costruisce
-        empty.useOn(new net.minecraft.world.item.context.UseOnContext(player, net.minecraft.world.InteractionHand.MAIN_HAND, hit));
-        helper.assertTrue(level.getBlockState(ground.above()).isAir(), "Ha costruito senza energia");
-        ItemStack full = new ItemStack(ModBlocks.SHELTER_CORE.get());
-        int cap = Shelter.capacity();
-        com.futuretek.item.EnergyItem.setEnergy(full, cap);
-        player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, full);
-        full.useOn(new net.minecraft.world.item.context.UseOnContext(player, net.minecraft.world.InteractionHand.MAIN_HAND, hit));
-        BlockPos core = ground.above();
-        helper.assertTrue(level.getBlockEntity(core) instanceof Shelter.CoreEntity, "Nucleo non piazzato");
-        Shelter.CoreEntity be = (Shelter.CoreEntity) level.getBlockEntity(core);
-        helper.assertTrue(be.energy() == cap - Shelter.cost(), "Energia non consumata: " + be.energy());
-        int beds = 0, tables = 0, furnaces = 0, walls = 0, roofs = 0;
-        for (BlockPos p : BlockPos.betweenClosed(core.offset(-3, 0, -3), core.offset(3, 3, 3))) {
-            var st = level.getBlockState(p);
-            if (st.is(net.minecraft.tags.BlockTags.BEDS)) beds++;
-            if (st.is(Blocks.CRAFTING_TABLE)) tables++;
-            if (st.is(Blocks.FURNACE)) furnaces++;
-            if (st.is(ModBlocks.SHELTER_WALL.get())) walls++;
-            if (st.is(ModBlocks.SHELTER_ROOF.get())) roofs++;
-        }
-        helper.assertTrue(beds == 2 && tables == 1 && furnaces == 1 && roofs == 49 && walls > 50,
-                "Casa sbagliata: letti " + beds + " banchi " + tables + " fornaci " + furnaces + " muri " + walls + " tetto " + roofs);
-        helper.assertTrue(level.getBlockState(ground.above().east()).isAir(), "L'erba dentro casa e' rimasta");
-        level.destroyBlock(core, false);
-        int left = 0;
-        for (BlockPos p : BlockPos.betweenClosed(core.offset(-3, 0, -3), core.offset(3, 3, 3))) {
-            if (!level.getBlockState(p).isAir()) left++;
-        }
-        helper.assertTrue(left == 0, "La casa non e' sparita: " + left + " blocchi");
-        helper.assertTrue(level.getBlockState(ground).is(Blocks.STONE), "Il terreno e' stato toccato");
-        var drops = level.getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class, new net.minecraft.world.phys.AABB(core).inflate(2));
-        helper.assertTrue(drops.size() == 1 && drops.get(0).getItem().is(ModBlocks.SHELTER_CORE.get().asItem())
-                && com.futuretek.item.EnergyItem.getEnergy(drops.get(0).getItem()) == cap - Shelter.cost(),
-                "Il nucleo non e' tornato con la carica: " + drops.stream().map(d -> d.getItem() + "=" + com.futuretek.item.EnergyItem.getEnergy(d.getItem())).toList());
-        drops.forEach(net.minecraft.world.entity.Entity::discard);
-        helper.succeed();
+        // vicino alla prova (chunk gia' attivi): lontano l'oggetto che cade puo' finire in una zona senza entita' attive
+        BlockPos ground = helper.absolutePos(new BlockPos(8, 0, 8));
+        helper.runAfterDelay(1, () -> {
+            for (BlockPos p : BlockPos.betweenClosed(ground.offset(-5, 0, -5), ground.offset(5, 0, 5))) {
+                level.setBlockAndUpdate(p, Blocks.STONE.defaultBlockState());
+                for (int y = 1; y <= 6; y++) level.setBlockAndUpdate(p.above(y), Blocks.AIR.defaultBlockState());
+            }
+            level.setBlockAndUpdate(ground.above().east(), Blocks.SHORT_GRASS.defaultBlockState()); // l'erba sparisce
+            var player = helper.makeMockPlayer(net.minecraft.world.level.GameType.SURVIVAL);
+            ItemStack empty = new ItemStack(ModBlocks.SHELTER_CORE.get());
+            player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, empty);
+            var hit = new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.atCenterOf(ground),
+                    net.minecraft.core.Direction.UP, ground, false);
+            // scarico: non costruisce
+            empty.useOn(new net.minecraft.world.item.context.UseOnContext(player, net.minecraft.world.InteractionHand.MAIN_HAND, hit));
+            helper.assertTrue(level.getBlockState(ground.above()).isAir(), "Ha costruito senza energia");
+            ItemStack full = new ItemStack(ModBlocks.SHELTER_CORE.get());
+            int cap = Shelter.capacity();
+            com.futuretek.item.EnergyItem.setEnergy(full, cap);
+            player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, full);
+            full.useOn(new net.minecraft.world.item.context.UseOnContext(player, net.minecraft.world.InteractionHand.MAIN_HAND, hit));
+            BlockPos core = ground.above();
+            helper.assertTrue(level.getBlockEntity(core) instanceof Shelter.CoreEntity, "Nucleo non piazzato");
+            Shelter.CoreEntity be = (Shelter.CoreEntity) level.getBlockEntity(core);
+            helper.assertTrue(be.energy() == cap - Shelter.cost(), "Energia non consumata: " + be.energy());
+            int beds = 0, tables = 0, furnaces = 0, walls = 0, roofs = 0;
+            for (BlockPos p : BlockPos.betweenClosed(core.offset(-3, 0, -3), core.offset(3, 3, 3))) {
+                var st = level.getBlockState(p);
+                if (st.is(net.minecraft.tags.BlockTags.BEDS)) beds++;
+                if (st.is(Blocks.CRAFTING_TABLE)) tables++;
+                if (st.is(Blocks.FURNACE)) furnaces++;
+                if (st.is(ModBlocks.SHELTER_WALL.get())) walls++;
+                if (st.is(ModBlocks.SHELTER_ROOF.get())) roofs++;
+            }
+            helper.assertTrue(beds == 2 && tables == 1 && furnaces == 1 && roofs == 49 && walls > 50,
+                    "Casa sbagliata: letti " + beds + " banchi " + tables + " fornaci " + furnaces + " muri " + walls + " tetto " + roofs);
+            helper.assertTrue(level.getBlockState(ground.above().east()).isAir(), "L'erba dentro casa e' rimasta");
+            level.destroyBlock(core, false);
+            int left = 0;
+            for (BlockPos p : BlockPos.betweenClosed(core.offset(-3, 0, -3), core.offset(3, 3, 3))) {
+                if (!level.getBlockState(p).isAir()) left++;
+            }
+            helper.assertTrue(left == 0, "La casa non e' sparita: " + left + " blocchi");
+            helper.assertTrue(level.getBlockState(ground).is(Blocks.STONE), "Il terreno e' stato toccato");
+            var drops = level.getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class, new net.minecraft.world.phys.AABB(core).inflate(2));
+            helper.assertTrue(drops.size() == 1 && drops.get(0).getItem().is(ModBlocks.SHELTER_CORE.get().asItem())
+                    && com.futuretek.item.EnergyItem.getEnergy(drops.get(0).getItem()) == cap - Shelter.cost(),
+                    "Il nucleo non e' tornato con la carica: tutti=" + level.getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class, new net.minecraft.world.phys.AABB(core).inflate(30)).size()
+                    + " blocco=" + level.getBlockState(core) + " be=" + level.getBlockEntity(core) + " " + drops.stream().map(d -> d.getItem() + "=" + com.futuretek.item.EnergyItem.getEnergy(d.getItem())).toList());
+            drops.forEach(net.minecraft.world.entity.Entity::discard);
+            helper.succeed();
+        });
     }
 
     /** Costruzione vera della fabbrica (lontano dalle altre prove): ci sono macchine, cavi e cartelli */

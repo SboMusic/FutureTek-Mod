@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "futuretek:ruby_log"
+      "tag": "futuretek:ruby_logs"
     }
   ],
   "result": {

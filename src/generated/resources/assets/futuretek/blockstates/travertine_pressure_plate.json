@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "futuretek:block/travertine_pressure_plate"
+    },
+    "powered=true": {
+      "model": "futuretek:block/travertine_pressure_plate_down"
+    }
+  }
+}

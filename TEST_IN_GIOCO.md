@@ -166,5 +166,13 @@ Segna ✅ / ❌ e scrivi a Claude cosa non va (Claude legge da solo il registro 
 - [ ] Dentro una foresta fitta o in montagna: messaggio "Non c'è posto"
 - [ ] Rifugio scarico: messaggio "Energia insufficiente"
 
+## 17b. Vulcano e blocchi completi
+- [ ] `/place feature futuretek:volcano` su un prato: cono nero con lava in cima e magma sul bordo
+- [ ] Esplorando un mondo nuovo si trova un vulcano (sono rari: uno ogni qualche centinaio di blocchi)
+- [ ] Ascia su un tronco colorato → tronco scortecciato
+- [ ] Porta, botola, pulsante e pedana colorati: si aprono / danno segnale redstone
+- [ ] Pulsante e pedana di roccia vulcanica / marmo / travertino / ardesia
+- [ ] Fornace e attrezzi di pietra fatti con il pietrisco di roccia vulcanica
+
 ## Multiplayer
 - [ ] "FutureTek - Server" + "FutureTek - Avvia" → Multigiocatore → `localhost`: ripeti 2-3 prove (macchina, terminale, Tavolo di Sintesi)

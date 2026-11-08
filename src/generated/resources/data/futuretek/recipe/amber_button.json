@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:amber_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:amber_button"
+  }
+}

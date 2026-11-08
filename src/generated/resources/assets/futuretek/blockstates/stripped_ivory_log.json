@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "futuretek:block/stripped_ivory_log"
+    },
+    "axis=z": {
+      "model": "futuretek:block/stripped_ivory_log_horizontal",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "futuretek:block/stripped_ivory_log_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

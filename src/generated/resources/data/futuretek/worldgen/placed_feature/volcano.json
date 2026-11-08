@@ -1,0 +1,12 @@
+{
+  "feature": "futuretek:volcano",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 260
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

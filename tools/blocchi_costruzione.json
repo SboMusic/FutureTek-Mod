@@ -189,6 +189,52 @@
    }
   },
   {
+   "id": "volcanic_rock_button",
+   "nome_en": "Volcanic Rock Button",
+   "nome_it": "Pulsante di roccia vulcanica",
+   "tipo": "bottone",
+   "base": "volcanic_rock",
+   "texture": "futuretek:block/volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:volcanic_rock"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "volcanic_rock_pressure_plate",
+   "nome_en": "Volcanic Rock Pressure Plate",
+   "nome_it": "Pedana a pressione di roccia vulcanica",
+   "tipo": "pedana",
+   "base": "volcanic_rock",
+   "texture": "futuretek:block/volcanic_rock",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX"
+     ],
+     "X": "futuretek:volcanic_rock",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_pressure_plates"
+   ]
+  },
+  {
    "id": "volcanic_rock_stairs",
    "nome_en": "Volcanic Rock Stairs",
    "nome_it": "Scale di roccia vulcanica",
@@ -701,6 +747,52 @@
      "quanti": 1
     }
    }
+  },
+  {
+   "id": "white_marble_button",
+   "nome_en": "White Marble Button",
+   "nome_it": "Pulsante di marmo bianco",
+   "tipo": "bottone",
+   "base": "white_marble",
+   "texture": "futuretek:block/white_marble",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:white_marble"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "white_marble_pressure_plate",
+   "nome_en": "White Marble Pressure Plate",
+   "nome_it": "Pedana a pressione di marmo bianco",
+   "tipo": "pedana",
+   "base": "white_marble",
+   "texture": "futuretek:block/white_marble",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX"
+     ],
+     "X": "futuretek:white_marble",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_pressure_plates"
+   ]
   },
   {
    "id": "white_marble_stairs",
@@ -1218,6 +1310,52 @@
    }
   },
   {
+   "id": "travertine_button",
+   "nome_en": "Travertine Button",
+   "nome_it": "Pulsante di travertino",
+   "tipo": "bottone",
+   "base": "travertine",
+   "texture": "futuretek:block/travertine",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:travertine"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "travertine_pressure_plate",
+   "nome_en": "Travertine Pressure Plate",
+   "nome_it": "Pedana a pressione di travertino",
+   "tipo": "pedana",
+   "base": "travertine",
+   "texture": "futuretek:block/travertine",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX"
+     ],
+     "X": "futuretek:travertine",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_pressure_plates"
+   ]
+  },
+  {
    "id": "travertine_stairs",
    "nome_en": "Travertine Stairs",
    "nome_it": "Scale di travertino",
@@ -1732,6 +1870,52 @@
    }
   },
   {
+   "id": "slate_button",
+   "nome_en": "Slate Button",
+   "nome_it": "Pulsante di ardesia",
+   "tipo": "bottone",
+   "base": "slate",
+   "texture": "futuretek:block/slate",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:slate"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "slate_pressure_plate",
+   "nome_en": "Slate Pressure Plate",
+   "nome_it": "Pedana a pressione di ardesia",
+   "tipo": "pedana",
+   "base": "slate",
+   "texture": "futuretek:block/slate",
+   "materiale": "pietra",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "XX"
+     ],
+     "X": "futuretek:slate",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:stone_pressure_plates"
+   ]
+  },
+  {
    "id": "slate_stairs",
    "nome_en": "Slate Stairs",
    "nome_it": "Scale di ardesia",
@@ -2115,13 +2299,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:ruby_log"
+      "#futuretek:ruby_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_ruby_log",
+   "nome_en": "Stripped Ruby Log",
+   "nome_it": "Tronco scortecciato color rubino",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_ruby_log",
+   "texture_cima": "futuretek:block/stripped_ruby_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:ruby_logs"
+   ]
+  },
+  {
+   "id": "ruby_wood",
+   "nome_en": "Ruby Wood",
+   "nome_it": "Legno color rubino",
+   "tipo": "tronco",
+   "texture": "futuretek:block/ruby_log",
+   "texture_cima": "futuretek:block/ruby_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:ruby_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:ruby_logs"
+   ],
+   "scortecciato": "stripped_ruby_wood"
+  },
+  {
+   "id": "stripped_ruby_wood",
+   "nome_en": "Stripped Ruby Wood",
+   "nome_it": "Legno scortecciato color rubino",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_ruby_log",
+   "texture_cima": "futuretek:block/stripped_ruby_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_ruby_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:ruby_logs"
+   ]
+  },
+  {
+   "id": "ruby_door",
+   "nome_en": "Ruby Door",
+   "nome_it": "Porta color rubino",
+   "tipo": "porta",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_door_bottom",
+   "texture_sopra": "futuretek:block/ruby_door_top",
+   "icona": "futuretek:block/ruby_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:ruby_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "ruby_trapdoor",
+   "nome_en": "Ruby Trapdoor",
+   "nome_it": "Botola color rubino",
+   "tipo": "botola",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:ruby_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "ruby_button",
+   "nome_en": "Ruby Button",
+   "nome_it": "Pulsante color rubino",
+   "tipo": "bottone",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:ruby_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "ruby_pressure_plate",
+   "nome_en": "Ruby Pressure Plate",
+   "nome_it": "Pedana a pressione color rubino",
+   "tipo": "pedana",
+   "base": "ruby_planks",
+   "texture": "futuretek:block/ruby_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:ruby_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -2150,8 +2511,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:ruby_logs"
+   ],
+   "scortecciato": "stripped_ruby_log"
   },
   {
    "id": "ruby_stairs",
@@ -2265,13 +2628,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:amber_log"
+      "#futuretek:amber_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_amber_log",
+   "nome_en": "Stripped Amber Log",
+   "nome_it": "Tronco scortecciato color ambra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_amber_log",
+   "texture_cima": "futuretek:block/stripped_amber_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:amber_logs"
+   ]
+  },
+  {
+   "id": "amber_wood",
+   "nome_en": "Amber Wood",
+   "nome_it": "Legno color ambra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/amber_log",
+   "texture_cima": "futuretek:block/amber_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:amber_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:amber_logs"
+   ],
+   "scortecciato": "stripped_amber_wood"
+  },
+  {
+   "id": "stripped_amber_wood",
+   "nome_en": "Stripped Amber Wood",
+   "nome_it": "Legno scortecciato color ambra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_amber_log",
+   "texture_cima": "futuretek:block/stripped_amber_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_amber_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:amber_logs"
+   ]
+  },
+  {
+   "id": "amber_door",
+   "nome_en": "Amber Door",
+   "nome_it": "Porta color ambra",
+   "tipo": "porta",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_door_bottom",
+   "texture_sopra": "futuretek:block/amber_door_top",
+   "icona": "futuretek:block/amber_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:amber_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "amber_trapdoor",
+   "nome_en": "Amber Trapdoor",
+   "nome_it": "Botola color ambra",
+   "tipo": "botola",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:amber_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "amber_button",
+   "nome_en": "Amber Button",
+   "nome_it": "Pulsante color ambra",
+   "tipo": "bottone",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:amber_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "amber_pressure_plate",
+   "nome_en": "Amber Pressure Plate",
+   "nome_it": "Pedana a pressione color ambra",
+   "tipo": "pedana",
+   "base": "amber_planks",
+   "texture": "futuretek:block/amber_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:amber_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -2300,8 +2840,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:amber_logs"
+   ],
+   "scortecciato": "stripped_amber_log"
   },
   {
    "id": "amber_stairs",
@@ -2415,13 +2957,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:honey_log"
+      "#futuretek:honey_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_honey_log",
+   "nome_en": "Stripped Honey Log",
+   "nome_it": "Tronco scortecciato color miele",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_honey_log",
+   "texture_cima": "futuretek:block/stripped_honey_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:honey_logs"
+   ]
+  },
+  {
+   "id": "honey_wood",
+   "nome_en": "Honey Wood",
+   "nome_it": "Legno color miele",
+   "tipo": "tronco",
+   "texture": "futuretek:block/honey_log",
+   "texture_cima": "futuretek:block/honey_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:honey_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:honey_logs"
+   ],
+   "scortecciato": "stripped_honey_wood"
+  },
+  {
+   "id": "stripped_honey_wood",
+   "nome_en": "Stripped Honey Wood",
+   "nome_it": "Legno scortecciato color miele",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_honey_log",
+   "texture_cima": "futuretek:block/stripped_honey_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_honey_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:honey_logs"
+   ]
+  },
+  {
+   "id": "honey_door",
+   "nome_en": "Honey Door",
+   "nome_it": "Porta color miele",
+   "tipo": "porta",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_door_bottom",
+   "texture_sopra": "futuretek:block/honey_door_top",
+   "icona": "futuretek:block/honey_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:honey_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "honey_trapdoor",
+   "nome_en": "Honey Trapdoor",
+   "nome_it": "Botola color miele",
+   "tipo": "botola",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:honey_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "honey_button",
+   "nome_en": "Honey Button",
+   "nome_it": "Pulsante color miele",
+   "tipo": "bottone",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:honey_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "honey_pressure_plate",
+   "nome_en": "Honey Pressure Plate",
+   "nome_it": "Pedana a pressione color miele",
+   "tipo": "pedana",
+   "base": "honey_planks",
+   "texture": "futuretek:block/honey_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:honey_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -2450,8 +3169,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:honey_logs"
+   ],
+   "scortecciato": "stripped_honey_log"
   },
   {
    "id": "honey_stairs",
@@ -2565,13 +3286,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:jade_log"
+      "#futuretek:jade_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_jade_log",
+   "nome_en": "Stripped Jade Log",
+   "nome_it": "Tronco scortecciato color giada",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_jade_log",
+   "texture_cima": "futuretek:block/stripped_jade_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:jade_logs"
+   ]
+  },
+  {
+   "id": "jade_wood",
+   "nome_en": "Jade Wood",
+   "nome_it": "Legno color giada",
+   "tipo": "tronco",
+   "texture": "futuretek:block/jade_log",
+   "texture_cima": "futuretek:block/jade_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:jade_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:jade_logs"
+   ],
+   "scortecciato": "stripped_jade_wood"
+  },
+  {
+   "id": "stripped_jade_wood",
+   "nome_en": "Stripped Jade Wood",
+   "nome_it": "Legno scortecciato color giada",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_jade_log",
+   "texture_cima": "futuretek:block/stripped_jade_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_jade_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:jade_logs"
+   ]
+  },
+  {
+   "id": "jade_door",
+   "nome_en": "Jade Door",
+   "nome_it": "Porta color giada",
+   "tipo": "porta",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_door_bottom",
+   "texture_sopra": "futuretek:block/jade_door_top",
+   "icona": "futuretek:block/jade_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:jade_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "jade_trapdoor",
+   "nome_en": "Jade Trapdoor",
+   "nome_it": "Botola color giada",
+   "tipo": "botola",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:jade_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "jade_button",
+   "nome_en": "Jade Button",
+   "nome_it": "Pulsante color giada",
+   "tipo": "bottone",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:jade_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "jade_pressure_plate",
+   "nome_en": "Jade Pressure Plate",
+   "nome_it": "Pedana a pressione color giada",
+   "tipo": "pedana",
+   "base": "jade_planks",
+   "texture": "futuretek:block/jade_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:jade_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -2600,8 +3498,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:jade_logs"
+   ],
+   "scortecciato": "stripped_jade_log"
   },
   {
    "id": "jade_stairs",
@@ -2715,13 +3615,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:azure_log"
+      "#futuretek:azure_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_azure_log",
+   "nome_en": "Stripped Azure Log",
+   "nome_it": "Tronco scortecciato color azzurro",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_azure_log",
+   "texture_cima": "futuretek:block/stripped_azure_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:azure_logs"
+   ]
+  },
+  {
+   "id": "azure_wood",
+   "nome_en": "Azure Wood",
+   "nome_it": "Legno color azzurro",
+   "tipo": "tronco",
+   "texture": "futuretek:block/azure_log",
+   "texture_cima": "futuretek:block/azure_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:azure_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:azure_logs"
+   ],
+   "scortecciato": "stripped_azure_wood"
+  },
+  {
+   "id": "stripped_azure_wood",
+   "nome_en": "Stripped Azure Wood",
+   "nome_it": "Legno scortecciato color azzurro",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_azure_log",
+   "texture_cima": "futuretek:block/stripped_azure_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_azure_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:azure_logs"
+   ]
+  },
+  {
+   "id": "azure_door",
+   "nome_en": "Azure Door",
+   "nome_it": "Porta color azzurro",
+   "tipo": "porta",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_door_bottom",
+   "texture_sopra": "futuretek:block/azure_door_top",
+   "icona": "futuretek:block/azure_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:azure_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "azure_trapdoor",
+   "nome_en": "Azure Trapdoor",
+   "nome_it": "Botola color azzurro",
+   "tipo": "botola",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:azure_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "azure_button",
+   "nome_en": "Azure Button",
+   "nome_it": "Pulsante color azzurro",
+   "tipo": "bottone",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:azure_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "azure_pressure_plate",
+   "nome_en": "Azure Pressure Plate",
+   "nome_it": "Pedana a pressione color azzurro",
+   "tipo": "pedana",
+   "base": "azure_planks",
+   "texture": "futuretek:block/azure_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:azure_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -2750,8 +3827,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:azure_logs"
+   ],
+   "scortecciato": "stripped_azure_log"
   },
   {
    "id": "azure_stairs",
@@ -2865,13 +3944,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:violet_log"
+      "#futuretek:violet_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_violet_log",
+   "nome_en": "Stripped Violet Log",
+   "nome_it": "Tronco scortecciato color violetto",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_violet_log",
+   "texture_cima": "futuretek:block/stripped_violet_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:violet_logs"
+   ]
+  },
+  {
+   "id": "violet_wood",
+   "nome_en": "Violet Wood",
+   "nome_it": "Legno color violetto",
+   "tipo": "tronco",
+   "texture": "futuretek:block/violet_log",
+   "texture_cima": "futuretek:block/violet_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:violet_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:violet_logs"
+   ],
+   "scortecciato": "stripped_violet_wood"
+  },
+  {
+   "id": "stripped_violet_wood",
+   "nome_en": "Stripped Violet Wood",
+   "nome_it": "Legno scortecciato color violetto",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_violet_log",
+   "texture_cima": "futuretek:block/stripped_violet_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_violet_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:violet_logs"
+   ]
+  },
+  {
+   "id": "violet_door",
+   "nome_en": "Violet Door",
+   "nome_it": "Porta color violetto",
+   "tipo": "porta",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_door_bottom",
+   "texture_sopra": "futuretek:block/violet_door_top",
+   "icona": "futuretek:block/violet_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:violet_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "violet_trapdoor",
+   "nome_en": "Violet Trapdoor",
+   "nome_it": "Botola color violetto",
+   "tipo": "botola",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:violet_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "violet_button",
+   "nome_en": "Violet Button",
+   "nome_it": "Pulsante color violetto",
+   "tipo": "bottone",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:violet_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "violet_pressure_plate",
+   "nome_en": "Violet Pressure Plate",
+   "nome_it": "Pedana a pressione color violetto",
+   "tipo": "pedana",
+   "base": "violet_planks",
+   "texture": "futuretek:block/violet_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:violet_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -2900,8 +4156,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:violet_logs"
+   ],
+   "scortecciato": "stripped_violet_log"
   },
   {
    "id": "violet_stairs",
@@ -3015,13 +4273,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:ivory_log"
+      "#futuretek:ivory_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_ivory_log",
+   "nome_en": "Stripped Ivory Log",
+   "nome_it": "Tronco scortecciato color avorio",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_ivory_log",
+   "texture_cima": "futuretek:block/stripped_ivory_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:ivory_logs"
+   ]
+  },
+  {
+   "id": "ivory_wood",
+   "nome_en": "Ivory Wood",
+   "nome_it": "Legno color avorio",
+   "tipo": "tronco",
+   "texture": "futuretek:block/ivory_log",
+   "texture_cima": "futuretek:block/ivory_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:ivory_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:ivory_logs"
+   ],
+   "scortecciato": "stripped_ivory_wood"
+  },
+  {
+   "id": "stripped_ivory_wood",
+   "nome_en": "Stripped Ivory Wood",
+   "nome_it": "Legno scortecciato color avorio",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_ivory_log",
+   "texture_cima": "futuretek:block/stripped_ivory_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_ivory_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:ivory_logs"
+   ]
+  },
+  {
+   "id": "ivory_door",
+   "nome_en": "Ivory Door",
+   "nome_it": "Porta color avorio",
+   "tipo": "porta",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_door_bottom",
+   "texture_sopra": "futuretek:block/ivory_door_top",
+   "icona": "futuretek:block/ivory_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:ivory_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "ivory_trapdoor",
+   "nome_en": "Ivory Trapdoor",
+   "nome_it": "Botola color avorio",
+   "tipo": "botola",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:ivory_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "ivory_button",
+   "nome_en": "Ivory Button",
+   "nome_it": "Pulsante color avorio",
+   "tipo": "bottone",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:ivory_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "ivory_pressure_plate",
+   "nome_en": "Ivory Pressure Plate",
+   "nome_it": "Pedana a pressione color avorio",
+   "tipo": "pedana",
+   "base": "ivory_planks",
+   "texture": "futuretek:block/ivory_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:ivory_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -3050,8 +4485,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:ivory_logs"
+   ],
+   "scortecciato": "stripped_ivory_log"
   },
   {
    "id": "ivory_stairs",
@@ -3165,13 +4602,190 @@
     },
     "crafting_2": {
      "senza_forma": [
-      "futuretek:shadow_log"
+      "#futuretek:shadow_logs"
      ],
      "quanti": 4
     }
    },
    "tag": [
     "minecraft:planks"
+   ]
+  },
+  {
+   "id": "stripped_shadow_log",
+   "nome_en": "Stripped Shadow Log",
+   "nome_it": "Tronco scortecciato color ombra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_shadow_log",
+   "texture_cima": "futuretek:block/stripped_shadow_log_top",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {},
+   "nota": "si ottiene usando l'ascia sul tronco",
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:shadow_logs"
+   ]
+  },
+  {
+   "id": "shadow_wood",
+   "nome_en": "Shadow Wood",
+   "nome_it": "Legno color ombra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/shadow_log",
+   "texture_cima": "futuretek:block/shadow_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:shadow_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:shadow_logs"
+   ],
+   "scortecciato": "stripped_shadow_wood"
+  },
+  {
+   "id": "stripped_shadow_wood",
+   "nome_en": "Stripped Shadow Wood",
+   "nome_it": "Legno scortecciato color ombra",
+   "tipo": "tronco",
+   "texture": "futuretek:block/stripped_shadow_log",
+   "texture_cima": "futuretek:block/stripped_shadow_log",
+   "materiale": "legno",
+   "durezza": 2.0,
+   "resistenza": 2.0,
+   "attrezzo": "ascia",
+   "infiammabile": true,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "LL",
+      "LL"
+     ],
+     "L": "futuretek:stripped_shadow_log",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:logs",
+    "minecraft:logs_that_burn",
+    "futuretek:shadow_logs"
+   ]
+  },
+  {
+   "id": "shadow_door",
+   "nome_en": "Shadow Door",
+   "nome_it": "Porta color ombra",
+   "tipo": "porta",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_door_bottom",
+   "texture_sopra": "futuretek:block/shadow_door_top",
+   "icona": "futuretek:block/shadow_door_item",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP",
+      "PP",
+      "PP"
+     ],
+     "P": "futuretek:shadow_planks",
+     "quanti": 3
+    }
+   },
+   "tag": [
+    "minecraft:wooden_doors",
+    "minecraft:doors"
+   ]
+  },
+  {
+   "id": "shadow_trapdoor",
+   "nome_en": "Shadow Trapdoor",
+   "nome_it": "Botola color ombra",
+   "tipo": "botola",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_trapdoor",
+   "materiale": "legno",
+   "durezza": 3.0,
+   "resistenza": 3.0,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PPP",
+      "PPP"
+     ],
+     "P": "futuretek:shadow_planks",
+     "quanti": 2
+    }
+   },
+   "tag": [
+    "minecraft:wooden_trapdoors",
+    "minecraft:trapdoors"
+   ]
+  },
+  {
+   "id": "shadow_button",
+   "nome_en": "Shadow Button",
+   "nome_it": "Pulsante color ombra",
+   "tipo": "bottone",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "senza_forma": [
+      "futuretek:shadow_planks"
+     ],
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_buttons",
+    "minecraft:buttons"
+   ]
+  },
+  {
+   "id": "shadow_pressure_plate",
+   "nome_en": "Shadow Pressure Plate",
+   "nome_it": "Pedana a pressione color ombra",
+   "tipo": "pedana",
+   "base": "shadow_planks",
+   "texture": "futuretek:block/shadow_planks",
+   "materiale": "legno",
+   "durezza": 0.5,
+   "resistenza": 0.5,
+   "ricette": {
+    "crafting": {
+     "schema": [
+      "PP"
+     ],
+     "P": "futuretek:shadow_planks",
+     "quanti": 1
+    }
+   },
+   "tag": [
+    "minecraft:wooden_pressure_plates",
+    "minecraft:pressure_plates"
    ]
   },
   {
@@ -3200,8 +4814,10 @@
    },
    "tag": [
     "minecraft:logs",
-    "minecraft:logs_that_burn"
-   ]
+    "minecraft:logs_that_burn",
+    "futuretek:shadow_logs"
+   ],
+   "scortecciato": "stripped_shadow_log"
   },
   {
    "id": "shadow_stairs",

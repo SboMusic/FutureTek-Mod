@@ -63,6 +63,7 @@ public class FutureTek {
         ModArmorMaterials.MATERIALS.register(modEventBus);
         com.futuretek.registry.ModBuildingBlocks.init(); // blocchi da costruzione
         ModBlocks.BLOCKS.register(modEventBus);
+        com.futuretek.world.Volcano.FEATURES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
         ModDataComponents.COMPONENTS.register(modEventBus);
@@ -109,6 +110,7 @@ public class FutureTek {
         NeoForge.EVENT_BUS.addListener(ArmorAbilities::onDamage);
         NeoForge.EVENT_BUS.addListener(com.futuretek.item.ElectricTools::onDamage);
         NeoForge.EVENT_BUS.addListener(com.futuretek.nuclear.NuclearBlast::onServerTick);
+        NeoForge.EVENT_BUS.addListener(com.futuretek.registry.ModBuildingBlocks::onToolUse);
         NeoForge.EVENT_BUS.addListener(com.futuretek.utility.Shelter::onBreak);
         NeoForge.EVENT_BUS.addListener(com.futuretek.utility.Shelter::onExplosion);
         // fabbrica abbandonata (la regola del mondo si registra caricando la classe)

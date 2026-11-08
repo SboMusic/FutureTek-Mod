@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "futuretek:honey_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:honey_button"
+  }
+}

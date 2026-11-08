@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "futuretek:honey_log"
+      "tag": "futuretek:honey_logs"
     }
   ],
   "result": {

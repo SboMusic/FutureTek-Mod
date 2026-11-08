@@ -377,6 +377,9 @@ Pietra (1000 mB/s), ferro (4000), d'oro (16 000). Con vetro a vista del liquido.
 
 - **Chiave inglese** – ruota i blocchi, smonta le macchine senza perdere il contenuto.
 - **Multimetro** – mostra energia, flusso e stato di un blocco.
+- **Vulcani** (Fase 17b) – rari coni di roccia vulcanica (raggio 10-14, alti 16-26) in pianure, savane, badlands,
+  deserti, taighe, colline e foreste: cratere con lago di lava, magma sulla bocca, colate di pietrisco sui fianchi e un
+  camino di lava che scende 14 blocchi sotto terra con un guscio di ossidiana (`world/Volcano.java`, 1 chunk su 260).
 - **Rifugio portatile** (Fase 17) – "tenda" elettrica per chi esplora: il nucleo costruisce una casetta 7x7
   (muri, tetto e finestre indistruttibili, letto, banco da lavoro, fornace, porta verso il giocatore).
   Rompendo il nucleo la casa sparisce, il terreno resta com'era e il nucleo torna con la carica.
@@ -407,7 +410,7 @@ Pietra (1000 mB/s), ferro (4000), d'oro (16 000). Con vetro a vista del liquido.
 | 13 | Tavolo d'incantamento elettrico; generatore di mostri da Nether (materiali del Nether, energia = frequenza), laser che uccidono (fatto) |
 | 14 | Robot: base di ricarica, robot contadino, guardia, minatore, nucleo infinito (fatto) |
 | 15 | Nucleare: TNT nucleare, reattore a camere che esplode, celle che si consumano, manutentore; fabbrica abbandonata (fatto) |
-| 16 | Grafica in stile vanilla (blocchi e oggetti), 136 blocchi da costruzione, minatore più robusto (fatto) |
+| 16 | Grafica in stile vanilla (blocchi e oggetti), 200 blocchi da costruzione, vulcani, minatore più robusto (fatto) |
 | 17 | Rifinitura, bilanciamento, multiplayer completo, pubblicazione |
 
 **Perché queste modifiche:**

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#futuretek:has_volcano",
+  "features": "futuretek:volcano",
+  "step": "surface_structures"
+}

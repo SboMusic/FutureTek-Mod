@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "futuretek:azure_log"
+      "tag": "futuretek:azure_logs"
     }
   ],
   "result": {

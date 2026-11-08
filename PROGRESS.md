@@ -246,3 +246,9 @@
 - Energia: 25.000 TU per casa, 6 case con la carica piena (config `shelterEnergyPerUse`, `shelterUses`); si ricarica nel banco accumulatore; il tooltip mostra le case rimaste. In creativa non consuma.
 - Guida dell'automazione: sezione 10 con due immagini (tools/disegna_rifugio.py). Texture: tools/grafica_rifugio.py.
 - Test automatici: **88** (nuovo: shelterBuildsAndDisappears).
+
+## Fase 17b — Vulcano e blocchi completi (fatto, sempre versione 1.0.0)
+- **Vulcano** (`world/Volcano.java`, feature `futuretek:volcano`): cono di roccia vulcanica con cratere di lava, bordo di magma, colate di pietrisco e camino di lava con ossidiana; raro (1 chunk su 260) nei biomi di terra (tag `futuretek:has_volcano`); funziona anche con `/place feature futuretek:volcano`. Verificato in un mondo vero.
+- **Legni colorati completi**: per ognuno degli 8 legni ora ci sono anche tronco scortecciato (con l'ascia), legno, legno scortecciato, porta, botola, pulsante e pedana a pressione; le assi si fanno da tutti i tronchi del colore (tag `futuretek:<colore>_logs`).
+- **Pietre**: pulsante e pedana a pressione per roccia vulcanica, marmo, travertino e ardesia; i pietrischi valgono come il pietrisco normale (fornace, attrezzi di pietra, tag `c:cobblestones`).
+- Blocchi da costruzione: **200** (prima 136). Test automatici: **90** (nuovi: volcanoGenerates, colouredWoodStripsAndDoors).

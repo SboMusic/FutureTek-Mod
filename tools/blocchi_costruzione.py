@@ -383,6 +383,79 @@ def cima_tronco(seme, r_assi, r_corteccia):
     return img
 
 
+def scortecciato(seme, r):
+    """Tronco scortecciato: legno liscio con venature verticali lunghe e morbide"""
+    img = tela()
+    for y in range(S):
+        for x in range(S):
+            col = Rumore(seme + "c", 16)(x, 0)
+            lungo = Rumore(seme + "v", 2)(x * 8, y)
+            g = Rumore(seme + "p", 16)(x, y)
+            v = 0.55 + (col - 0.5) * 0.35 + (lungo - 0.5) * 0.2 + (g - 0.5) * 0.08
+            put(img, x, y, q(r[1:6], max(0.05, min(0.999, v))))
+    return img
+
+
+def porta(seme, r, parte):
+    """Porta di legno: telaio scuro, pannelli in rilievo; in alto due finestrelle trasparenti"""
+    img = tela()
+    base = assi(seme, r)
+    for y in range(S):
+        for x in range(S):
+            c = get(base, x, y)
+            telaio = x in (0, S - 1) or (parte == "sopra" and y == 0) or (parte == "sotto" and y == S - 1)
+            if telaio:
+                c = mix(r[0], r[1], 0.5)
+            elif x in (1, S - 2) or (parte == "sopra" and y == 1) or (parte == "sotto" and y == S - 2):
+                c = schiarisci(c, 0.12)
+            put(img, x, y, c)
+    if parte == "sopra":
+        for (x0, x1) in ((3, 6), (9, 12)):        # finestrelle
+            for y in range(3, 9):
+                for x in range(x0, x1 + 1):
+                    img.putpixel((x, y), (0, 0, 0, 0))
+            for x in range(x0 - 1, x1 + 2):
+                put(img, x, 2, mix(r[0], r[1], 0.6))
+                put(img, x, 9, schiarisci(r[3], 0.1))
+        for y in range(11, 16):                    # pannello
+            put(img, 3, y, r[1]); put(img, 12, y, r[4])
+    else:
+        for (y0, y1) in ((1, 6), (8, 13)):         # due pannelli
+            for x in range(3, 13):
+                put(img, x, y0, r[1]); put(img, x, y1, r[4])
+            for y in range(y0, y1 + 1):
+                put(img, 3, y, r[1]); put(img, 12, y, r[4])
+        put(img, 12, 7, (190, 170, 90)); put(img, 13, 7, (120, 100, 50))  # maniglia
+    return img
+
+
+def porta_icona(sopra, sotto):
+    """Icona dell'oggetto porta: la porta intera rimpicciolita, larga 8 pixel"""
+    img = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    for y in range(S):
+        src = sopra if y < 8 else sotto
+        sy = (y % 8) * 2
+        for x in range(8):
+            img.putpixel((4 + x, y), src.getpixel((x * 2, sy)))
+    return img
+
+
+def botola(seme, r):
+    """Botola: cornice spessa e una griglia di 4 aperture"""
+    img = assi(seme, r)
+    for y in range(S):
+        for x in range(S):
+            if x in (0, S - 1) or y in (0, S - 1):
+                put(img, x, y, mix(r[0], r[1], 0.5))
+            elif x in (1, S - 2) or y in (1, S - 2) or x in (7, 8) or y in (7, 8):
+                put(img, x, y, schiarisci(get(img, x, y), 0.08))
+    for (x0, y0) in ((3, 3), (10, 3), (3, 10), (10, 10)):
+        for y in range(y0, y0 + 3):
+            for x in range(x0, x0 + 3):
+                img.putpixel((x, y), (0, 0, 0, 0))
+    return img
+
+
 # ---------------------------------------------------------------------------
 # CATALOGO
 # ---------------------------------------------------------------------------
@@ -507,6 +580,15 @@ def costruisci(salva=True):
                 b["generazione"] = p["generazione"]
                 b["drop"] = f"futuretek:cobbled_{pid}"
             blocchi.append(b)
+        blocchi.append({"id": f"{pid}_button", "nome_en": f"{en} Button", "nome_it": f"Pulsante di {it.lower()}",
+                        "tipo": "bottone", "base": pid, "texture": tex(pid), "materiale": "pietra", "durezza": 0.5,
+                        "resistenza": 0.5, "ricette": {"crafting": {"senza_forma": [f"futuretek:{pid}"], "quanti": 1}},
+                        "tag": ["minecraft:stone_buttons", "minecraft:buttons"]})
+        blocchi.append({"id": f"{pid}_pressure_plate", "nome_en": f"{en} Pressure Plate",
+                        "nome_it": f"Pedana a pressione di {it.lower()}", "tipo": "pedana", "base": pid,
+                        "texture": tex(pid), "materiale": "pietra", "durezza": 0.5, "resistenza": 0.5,
+                        "ricette": {"crafting": {"schema": ["XX"], "X": f"futuretek:{pid}", "quanti": 1}},
+                        "tag": ["minecraft:stone_pressure_plates"]})
         for vid, ven, vit in [(pid, en, it), (f"cobbled_{pid}", f"Cobbled {en}", f"pietrisco di {it.lower()}"),
                               (f"polished_{pid}", f"Polished {en}", f"{it.lower()} levigata"),
                               (f"{pid}_bricks", f"{en} Brick", f"mattoni di {it.lower()}"),
@@ -523,22 +605,72 @@ def costruisci(salva=True):
         aggiungi(assi(lid + "a", ra), f"{lid}_planks")
         aggiungi(corteccia(lid + "c", rc), f"{lid}_log")
         aggiungi(cima_tronco(lid + "t", ra, rc), f"{lid}_log_top")
+        aggiungi(scortecciato(lid + "s", ra), f"stripped_{lid}_log")
+        aggiungi(cima_tronco(lid + "u", ra, rampa(c_assi, scuro=0.5, chiaro=0.1)), f"stripped_{lid}_log_top")
+        p_sopra = porta(lid + "d", ra, "sopra")
+        p_sotto = porta(lid + "d", ra, "sotto")
+        aggiungi(p_sopra, f"{lid}_door_top")
+        aggiungi(p_sotto, f"{lid}_door_bottom")
+        aggiungi(porta_icona(p_sopra, p_sotto), f"{lid}_door_item")
+        aggiungi(botola(lid + "b", ra), f"{lid}_trapdoor")
         blocchi.append({
             "id": f"{lid}_planks", "nome_en": f"{en} Planks", "nome_it": f"Assi color {it}", "tipo": "cubo",
             "texture": tex(f"{lid}_planks"), "materiale": "legno", "durezza": 2.0, "resistenza": 3.0,
             "attrezzo": "ascia", "infiammabile": True,
             "ricette": {"crafting": {"schema": ["PPP", "PDP", "PPP"], "P": "#minecraft:planks", "D": colorante,
                                      "quanti": 8},
-                        "crafting_2": {"senza_forma": [f"futuretek:{lid}_log"], "quanti": 4}},
+                        "crafting_2": {"senza_forma": [f"#futuretek:{lid}_logs"], "quanti": 4}},
             "tag": ["minecraft:planks"],
         })
+        legna = ["minecraft:logs", "minecraft:logs_that_burn", f"futuretek:{lid}_logs"]
+        blocchi.append({
+            "id": f"stripped_{lid}_log", "nome_en": f"Stripped {en} Log", "nome_it": f"Tronco scortecciato color {it}",
+            "tipo": "tronco", "texture": tex(f"stripped_{lid}_log"), "texture_cima": tex(f"stripped_{lid}_log_top"),
+            "materiale": "legno", "durezza": 2.0, "resistenza": 2.0, "attrezzo": "ascia", "infiammabile": True,
+            "ricette": {}, "nota": "si ottiene usando l'ascia sul tronco", "tag": legna})
+        blocchi.append({
+            "id": f"{lid}_wood", "nome_en": f"{en} Wood", "nome_it": f"Legno color {it}", "tipo": "tronco",
+            "texture": tex(f"{lid}_log"), "texture_cima": tex(f"{lid}_log"), "materiale": "legno", "durezza": 2.0,
+            "resistenza": 2.0, "attrezzo": "ascia", "infiammabile": True,
+            "ricette": {"crafting": {"schema": ["LL", "LL"], "L": f"futuretek:{lid}_log", "quanti": 3}}, "tag": legna,
+            "scortecciato": f"stripped_{lid}_wood"})
+        blocchi.append({
+            "id": f"stripped_{lid}_wood", "nome_en": f"Stripped {en} Wood", "nome_it": f"Legno scortecciato color {it}",
+            "tipo": "tronco", "texture": tex(f"stripped_{lid}_log"), "texture_cima": tex(f"stripped_{lid}_log"),
+            "materiale": "legno", "durezza": 2.0, "resistenza": 2.0, "attrezzo": "ascia", "infiammabile": True,
+            "ricette": {"crafting": {"schema": ["LL", "LL"], "L": f"futuretek:stripped_{lid}_log", "quanti": 3}},
+            "tag": legna})
+        blocchi.append({
+            "id": f"{lid}_door", "nome_en": f"{en} Door", "nome_it": f"Porta color {it}", "tipo": "porta",
+            "base": f"{lid}_planks", "texture": tex(f"{lid}_door_bottom"), "texture_sopra": tex(f"{lid}_door_top"),
+            "icona": f"futuretek:block/{lid}_door_item", "materiale": "legno", "durezza": 3.0, "resistenza": 3.0,
+            "ricette": {"crafting": {"schema": ["PP", "PP", "PP"], "P": f"futuretek:{lid}_planks", "quanti": 3}},
+            "tag": ["minecraft:wooden_doors", "minecraft:doors"]})
+        blocchi.append({
+            "id": f"{lid}_trapdoor", "nome_en": f"{en} Trapdoor", "nome_it": f"Botola color {it}", "tipo": "botola",
+            "base": f"{lid}_planks", "texture": tex(f"{lid}_trapdoor"), "materiale": "legno", "durezza": 3.0,
+            "resistenza": 3.0,
+            "ricette": {"crafting": {"schema": ["PPP", "PPP"], "P": f"futuretek:{lid}_planks", "quanti": 2}},
+            "tag": ["minecraft:wooden_trapdoors", "minecraft:trapdoors"]})
+        blocchi.append({
+            "id": f"{lid}_button", "nome_en": f"{en} Button", "nome_it": f"Pulsante color {it}", "tipo": "bottone",
+            "base": f"{lid}_planks", "texture": tex(f"{lid}_planks"), "materiale": "legno", "durezza": 0.5,
+            "resistenza": 0.5, "ricette": {"crafting": {"senza_forma": [f"futuretek:{lid}_planks"], "quanti": 1}},
+            "tag": ["minecraft:wooden_buttons", "minecraft:buttons"]})
+        blocchi.append({
+            "id": f"{lid}_pressure_plate", "nome_en": f"{en} Pressure Plate", "nome_it": f"Pedana a pressione color {it}",
+            "tipo": "pedana", "base": f"{lid}_planks", "texture": tex(f"{lid}_planks"), "materiale": "legno",
+            "durezza": 0.5, "resistenza": 0.5,
+            "ricette": {"crafting": {"schema": ["PP"], "P": f"futuretek:{lid}_planks", "quanti": 1}},
+            "tag": ["minecraft:wooden_pressure_plates", "minecraft:pressure_plates"]})
         blocchi.append({
             "id": f"{lid}_log", "nome_en": f"{en} Log", "nome_it": f"Tronco color {it}", "tipo": "tronco",
             "texture": tex(f"{lid}_log"), "texture_cima": tex(f"{lid}_log_top"), "materiale": "legno",
             "durezza": 2.0, "resistenza": 2.0, "attrezzo": "ascia", "infiammabile": True,
             "ricette": {"crafting": {"schema": ["LLL", "LDL", "LLL"], "L": "#minecraft:logs_that_burn",
                                      "D": colorante, "quanti": 8}},
-            "tag": ["minecraft:logs", "minecraft:logs_that_burn"],
+            "tag": ["minecraft:logs", "minecraft:logs_that_burn", f"futuretek:{lid}_logs"],
+            "scortecciato": f"stripped_{lid}_log",
         })
         for fb in forme(f"{lid}_planks", en, f"assi color {it}", f"{lid}_planks", "legno", 2.0, False):
             fb["id"] = fb["id"].replace("_planks_", "_")  # ruby_stairs, ruby_slab

@@ -4730,6 +4730,93 @@ def m_tronco(id_, lato, cima):
     return f
 
 
+def m_porta(id_, sotto, sopra, icona):
+    def f():
+        for parte, tex_ in (("bottom", sotto), ("top", sopra)):
+            for lato in ("left", "right"):
+                for aperta in ("", "_open"):
+                    scrivi_json(f"{A16}/models/block/{id_}_{parte}_{lato}{aperta}.json", {
+                        "parent": f"minecraft:block/door_{parte}_{lato}{aperta}", "render_type": "minecraft:cutout",
+                        "textures": {"bottom": sotto, "top": sopra}})
+        varianti = {}
+        for facing, y0 in (("east", 0), ("south", 90), ("west", 180), ("north", 270)):
+            for half, parte in (("lower", "bottom"), ("upper", "top")):
+                for hinge in ("left", "right"):
+                    for aperta in ("false", "true"):
+                        y = y0
+                        if aperta == "true":
+                            y += 90 if hinge == "left" else 270
+                        v = {"model": f"{MODID}:block/{id_}_{parte}_{hinge}" + ("_open" if aperta == "true" else "")}
+                        if y % 360:
+                            v["y"] = y % 360
+                        varianti[f"facing={facing},half={half},hinge={hinge},open={aperta}"] = v
+        scrivi_json(f"{A16}/blockstates/{id_}.json", {"variants": varianti})
+        scrivi_json(f"{A16}/models/item/{id_}.json", {"parent": "minecraft:item/generated", "textures": {"layer0": icona}})
+    return f
+
+
+def m_botola(id_, tex):
+    def f():
+        for parte in ("bottom", "top", "open"):
+            scrivi_json(f"{A16}/models/block/{id_}_{parte}.json", {
+                "parent": f"minecraft:block/template_orientable_trapdoor_{parte}", "render_type": "minecraft:cutout",
+                "textures": {"texture": tex}})
+        varianti = {}
+        for facing, y in (("north", 0), ("east", 90), ("south", 180), ("west", 270)):
+            for half in ("bottom", "top"):
+                for aperta in ("false", "true"):
+                    if aperta == "true":
+                        v = {"model": f"{MODID}:block/{id_}_open"}
+                        yy = y if half == "bottom" else (y + 180) % 360
+                        if half == "top":
+                            v["x"] = 180
+                    else:
+                        v = {"model": f"{MODID}:block/{id_}_{half}"}
+                        yy = y
+                    if yy:
+                        v["y"] = yy
+                    varianti[f"facing={facing},half={half},open={aperta}"] = v
+        scrivi_json(f"{A16}/blockstates/{id_}.json", {"variants": varianti})
+        scrivi_json(f"{A16}/models/item/{id_}.json", {"parent": f"{MODID}:block/{id_}_bottom"})
+    return f
+
+
+def m_bottone(id_, tex):
+    def f():
+        for nome, parent in (("", "button"), ("_pressed", "button_pressed"), ("_inventory", "button_inventory")):
+            scrivi_json(f"{A16}/models/block/{id_}{nome}.json", {"parent": f"minecraft:block/{parent}",
+                                                                   "textures": {"texture": tex}})
+        rot = {"floor": (0, {"north": 0, "east": 90, "south": 180, "west": 270}),
+               "wall": (90, {"north": 0, "east": 90, "south": 180, "west": 270}),
+               "ceiling": (180, {"north": 180, "east": 270, "south": 0, "west": 90})}
+        varianti = {}
+        for face, (x, ys) in rot.items():
+            for facing, y in ys.items():
+                for premuto in ("false", "true"):
+                    v = {"model": f"{MODID}:block/{id_}" + ("_pressed" if premuto == "true" else "")}
+                    if x:
+                        v["x"] = x
+                    if y:
+                        v["y"] = y
+                    if face == "wall":
+                        v["uvlock"] = True
+                    varianti[f"face={face},facing={facing},powered={premuto}"] = v
+        scrivi_json(f"{A16}/blockstates/{id_}.json", {"variants": varianti})
+        scrivi_json(f"{A16}/models/item/{id_}.json", {"parent": f"{MODID}:block/{id_}_inventory"})
+    return f
+
+
+def m_pedana(id_, tex):
+    def f():
+        scrivi_json(f"{A16}/models/block/{id_}.json", {"parent": "minecraft:block/pressure_plate_up", "textures": {"texture": tex}})
+        scrivi_json(f"{A16}/models/block/{id_}_down.json", {"parent": "minecraft:block/pressure_plate_down",
+                                                             "textures": {"texture": tex}})
+        scrivi_json(f"{A16}/blockstates/{id_}.json", {"variants": {
+            "powered=false": {"model": f"{MODID}:block/{id_}"}, "powered=true": {"model": f"{MODID}:block/{id_}_down"}}})
+        scrivi_json(f"{A16}/models/item/{id_}.json", {"parent": f"{MODID}:block/{id_}"})
+    return f
+
+
 TAG_TIPO = {"scale": ["minecraft:stairs"], "lastra": ["minecraft:slabs"], "muro": ["minecraft:walls"],
             "staccionata": ["minecraft:fences"], "cancello": ["minecraft:fence_gates"]}
 for b in COSTRUZIONE:
@@ -4753,6 +4840,20 @@ for b in COSTRUZIONE:
         modelli_speciali[id_] = m_cancello(id_, tex)
     elif tipo == "tronco":
         modelli_speciali[id_] = m_tronco(id_, tex, b["texture_cima"])
+    elif tipo == "porta":
+        modelli_speciali[id_] = m_porta(id_, tex, b["texture_sopra"], b["icona"])
+        loot_speciali[id_] = {"type": "minecraft:block", "pools": [{"rolls": 1.0, "bonus_rolls": 0.0, "entries": [
+            {"type": "minecraft:item", "name": ft(id_), "conditions": [
+                {"condition": "minecraft:block_state_property", "block": ft(id_), "properties": {"half": "lower"}}]}],
+            "conditions": [{"condition": "minecraft:survives_explosion"}]}]}
+    elif tipo == "botola":
+        modelli_speciali[id_] = m_botola(id_, tex)
+    elif tipo == "bottone":
+        modelli_speciali[id_] = m_bottone(id_, tex)
+    elif tipo == "pedana":
+        modelli_speciali[id_] = m_pedana(id_, tex)
+    if b.get("scortecciato"):
+        COPIE_ESSENZA[ft(b["scortecciato"])] = ft(id_)
     tag(tag_blocchi, "minecraft:mineable/axe" if legno else "minecraft:mineable/pickaxe", ft(id_))
     for t in TAG_TIPO.get(tipo, []) + b.get("tag", []):
         tag(tag_blocchi, t, ft(id_))
@@ -4804,6 +4905,23 @@ for b in COSTRUZIONE:
             "features": ft(f"rock_{id_}"), "step": "underground_ores"}
         # il pietrisco vale come il pietrisco normale
         VALORI_ESSENZA[(b.get("drop") or ft(id_))] = 1
+
+for _p in ("volcanic_rock", "white_marble", "travertine", "slate"):
+    for _t in ("c:cobblestones", "minecraft:stone_tool_materials", "minecraft:stone_crafting_materials"):
+        tag(tag_oggetti, _t, ft(f"cobbled_{_p}"))
+    tag(tag_blocchi, "c:cobblestones", ft(f"cobbled_{_p}"))
+
+# Vulcano: cono di roccia vulcanica con cratere di lava (world/Volcano.java), raro nei biomi di terra
+worldgen[f"data/{MODID}/worldgen/configured_feature/volcano.json"] = {"type": ft("volcano"), "config": {}}
+worldgen[f"data/{MODID}/worldgen/placed_feature/volcano.json"] = {"feature": ft("volcano"), "placement": [
+    {"type": "minecraft:rarity_filter", "chance": 260}, {"type": "minecraft:biome"}]}
+worldgen[f"data/{MODID}/neoforge/biome_modifier/volcano.json"] = {
+    "type": "neoforge:add_features", "biomes": "#" + ft("has_volcano"), "features": ft("volcano"),
+    "step": "surface_structures"}
+worldgen[f"data/{MODID}/tags/worldgen/biome/has_volcano.json"] = {"values": [f"minecraft:{_b}" for _b in (
+    "plains", "sunflower_plains", "savanna", "savanna_plateau", "windswept_savanna", "badlands",
+           "eroded_badlands", "wooded_badlands", "desert", "snowy_plains", "taiga", "snowy_taiga", "meadow",
+           "windswept_hills", "windswept_gravelly_hills", "stony_shore", "forest", "birch_forest")]}
 
 # ===========================================================================
 # FASE 16b: ricerca degli incantesimi (archivio + ricercatore + incantatore a scelta)

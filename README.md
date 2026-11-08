@@ -16,7 +16,7 @@ Autore: **SboMusic** · Versione **1.0.0** · Minecraft **1.21.1** · NeoForge *
 
 | Parte | In breve |
 |---|---|
-| **Materiali** | stagno, piombo, argento, uranio, bronzo, acciaio; albero della resina; 136 blocchi da costruzione (4 pietre, 8 legni) |
+| **Materiali** | stagno, piombo, argento, uranio, bronzo, acciaio; albero della resina; 200 blocchi da costruzione (4 pietre, 8 legni completi di porte, botole, pulsanti, pedane) |
 | **Energia (TU)** | generatori a carbone, geotermici, solari I-III, a vento, ad acqua, avanzati; cavi con reti; batterie e banchi accumulatori |
 | **Macchine** | frantumatore, fornace elettrica, estrattore, compressore, lavatrice di minerali e molte altre, con potenziamenti |
 | **Essenza** | trasmutazione: ogni oggetto ha un valore, si trasforma e si replica; anelli, amuleti, attrezzi e armature alchemici |
@@ -25,7 +25,7 @@ Autore: **SboMusic** · Versione **1.0.0** · Minecraft **1.21.1** · NeoForge *
 | **Automazione** | robot autonomi (contadino, guardia, sentinella, minatore, taglialegna) con pannello, talpa mineraria, casa automatica |
 | **Nether** | incantatrice elettrica con ricerca degli incantesimi, incubatore di creature e torretta laser |
 | **Ferrovie e api** | binari speciali e carrello merci; 10 specie di api con incroci |
-| **Esplorazione** | la dimensione *Margine Cristallino*, la fabbrica abbandonata nei mondi nuovi, il **rifugio portatile** |
+| **Esplorazione** | i **vulcani** di roccia vulcanica, la dimensione *Margine Cristallino*, la fabbrica abbandonata nei mondi nuovi, il **rifugio portatile** |
 
 Guide illustrate (si aprono nel browser): [`docs/guida_craft.html`](docs/guida_craft.html) (tutte le ricette),
 [`docs/guida_automazione.html`](docs/guida_automazione.html), [`docs/guida_logistica.html`](docs/guida_logistica.html).

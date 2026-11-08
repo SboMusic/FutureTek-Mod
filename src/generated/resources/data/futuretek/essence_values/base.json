@@ -403,6 +403,22 @@
     "minecraft:oxidized_copper_trapdoor": "minecraft:copper_trapdoor",
     "minecraft:oxidized_cut_copper": "minecraft:cut_copper",
     "minecraft:oxidized_cut_copper_slab": "minecraft:cut_copper_slab",
-    "minecraft:oxidized_cut_copper_stairs": "minecraft:cut_copper_stairs"
+    "minecraft:oxidized_cut_copper_stairs": "minecraft:cut_copper_stairs",
+    "futuretek:stripped_ruby_wood": "futuretek:ruby_wood",
+    "futuretek:stripped_ruby_log": "futuretek:ruby_log",
+    "futuretek:stripped_amber_wood": "futuretek:amber_wood",
+    "futuretek:stripped_amber_log": "futuretek:amber_log",
+    "futuretek:stripped_honey_wood": "futuretek:honey_wood",
+    "futuretek:stripped_honey_log": "futuretek:honey_log",
+    "futuretek:stripped_jade_wood": "futuretek:jade_wood",
+    "futuretek:stripped_jade_log": "futuretek:jade_log",
+    "futuretek:stripped_azure_wood": "futuretek:azure_wood",
+    "futuretek:stripped_azure_log": "futuretek:azure_log",
+    "futuretek:stripped_violet_wood": "futuretek:violet_wood",
+    "futuretek:stripped_violet_log": "futuretek:violet_log",
+    "futuretek:stripped_ivory_wood": "futuretek:ivory_wood",
+    "futuretek:stripped_ivory_log": "futuretek:ivory_log",
+    "futuretek:stripped_shadow_wood": "futuretek:shadow_wood",
+    "futuretek:stripped_shadow_log": "futuretek:shadow_log"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "futuretek:block/ivory_wood"
+    },
+    "axis=z": {
+      "model": "futuretek:block/ivory_wood_horizontal",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "futuretek:block/ivory_wood_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

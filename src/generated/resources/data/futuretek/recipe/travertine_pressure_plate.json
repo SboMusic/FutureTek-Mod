@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "futuretek:travertine"
+    }
+  },
+  "pattern": [
+    "XX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "futuretek:travertine_pressure_plate"
+  }
+}
